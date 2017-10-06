@@ -1,0 +1,31 @@
+
+  /* Start Button
+========================================================================== */
+/** Button Default **/
+.btn , button, .button, input[type='submit'],  {
+  border: 1px solid #696969;
+  @include border-radius(0); 
+  padding:6px 12px;
+  font-size: 12px;
+  line-height: 17px; 
+  letter-spacing: 0.04em;
+  font-family: Montserrat;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #696969;
+  &:hover, &:focus{
+    text-decoration: none;
+    background: $primary_color;
+    color: #fff;
+    border-color:$primary_color;
+  }
+}
+    /** Button Primary **/
+.btn.btn-primary {
+    
+}
+.btn{
+	&.btn-small{
+		padding: 10px 20px;
+	}
+}

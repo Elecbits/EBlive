@@ -1,0 +1,39 @@
+== Tao Changelog ==
+
+
+
+= 28 Oct 2013 - version 1.0.1 =
+
+* MODIFIED:
+
+- /function-includes/theme-functions.php - introduced a new function, "oy_get_next_and_prev_links", for getting the next and previous links in single portfolio items. 
+- single-portfolio.php - changed the code for next and previous links, to use the new adjacent links function mentioned above.
+
+
+
+= 22 Nov 2013 - version 1.1.0 =
+
+* REMOVED:
+
+- /js/meny.js
+
+* MODIFIED:
+
+- style.css - rewrote and added the code for the menu, the portfolio meta columns, and other, minor elements. 
+- single-portfolio.php - changed the code for the post meta columns. 
+- includes/enqueues.php - removed the meny.js script from the theme enqueues.
+- /js/jquery.footer.custom.js - rewrote the code for the menu.
+- /plugins/portfolio-custom-metaboxes/portfolio-custom-metaboxes.php - added a new field for the portfolio edit window, to control the display of the publication date of every post.
+
+
+= 22 Nov 2013 - version 1.1.1 =
+
+* MODIFIED:
+
+- includes/portfolio.php - modified the query to fetch the items by category slug; not the category name. 
+
+
+
+
+
+

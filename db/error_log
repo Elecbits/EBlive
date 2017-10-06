@@ -1,0 +1,6 @@
+[04-Sep-2016 06:49:56 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/db/db.php on line 41
+[04-Sep-2016 06:49:56 Etc/GMT] PHP Warning:  mysql_error() expects parameter 1 to be resource, string given in /home/elecbksb/public_html/main/db/db.php on line 51
+[04-Sep-2016 06:58:40 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, string given in /home/elecbksb/public_html/main/db/db.php on line 41
+[04-Sep-2016 06:58:40 Etc/GMT] PHP Warning:  mysql_error() expects at most 1 parameter, 2 given in /home/elecbksb/public_html/main/db/db.php on line 51
+[04-Sep-2016 07:00:27 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/db/db.php on line 41
+[04-Sep-2016 07:00:27 Etc/GMT] PHP Warning:  mysql_error() expects at most 1 parameter, 2 given in /home/elecbksb/public_html/main/db/db.php on line 51

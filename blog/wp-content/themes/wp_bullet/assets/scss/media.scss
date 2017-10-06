@@ -1,0 +1,242 @@
+/* Images */
+img{
+  max-width: 100%;
+}
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.entry-content img,
+.comment-content img,
+.widget img,
+img.header-image,
+.author-avatar img,
+img.wp-post-image {
+  /* Add fancy borders to all WordPress-added images but not things like badges and icons and the like */
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.wp-caption {
+  max-width: 100%; /* Keep wide captions from overflowing their container. */
+  padding: 4px;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.entry-caption {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 2;
+  color: #757575;
+}
+img.wp-smiley,
+.rsswidget img {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+.entry-content dl.gallery-item {
+  margin: 0;
+}
+.gallery-item a,
+.gallery-caption {
+  width: 90%;
+}
+.gallery-item a {
+  display: block;
+}
+.gallery-caption a {
+  display: inline;
+}
+.gallery-columns-1 .gallery-item a {
+  max-width: 100%;
+  width: auto;
+}
+.gallery .gallery-icon img {
+  height: auto;
+  max-width: 90%;
+  padding: 5%;
+}
+.gallery-columns-1 .gallery-icon img {
+  padding: 3%;
+}
+/* Video background */
+.row-bg-video{
+  position: relative;
+  overflow: hidden;
+  .cms-bg-video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .wp-video{
+      position:absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      .mejs-container{
+        background:transparent;
+        height: 100% !important;
+        .mejs-inner{
+          height: 100% !important;
+          .mejs-mediaelement{
+            overflow: hidden;
+            video.wp-video-shortcode{
+              position:absolute;
+              top:50%;
+              left: 50%;
+              @include transform(translate(-50%,-50%));
+              width: auto !important;
+              height: auto !important;
+              min-height: 100% !important;
+              min-width: 100% !important;
+              max-width:none !important;
+            }
+          }
+          .mejs-controls{
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+  .wp-video-shortcode{
+    width: 100%!important;
+    height: auto!important;
+  }
+}
+
+body .mejs-container {
+    height: 50px !important;
+}
+body .mejs-container .mejs-controls {
+    height: 50px;
+}
+body .mejs-container,
+body .mejs-embed, 
+body .mejs-embed body, 
+body .mejs-container .mejs-controls {
+    background: #fff !important;
+}
+body .mejs-container .mejs-controls {
+    border: 2px solid #eeeeee;
+    @include border-radius(2px);
+}
+body  .mejs-container .mejs-controls .mejs-time .mejs-currenttime,
+body  .mejs-container .mejs-controls .mejs-time .mejs-duration {
+    color: #333;
+    display: block;
+    line-height: 47px;
+    width: 100%;
+}
+body .mejs-controls .mejs-time-rail .mejs-time-total, 
+body .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+body .mejs-controls .mejs-time-rail .mejs-time-loaded {
+    background: #f5f5f5;
+     @include border-radius(0);
+}
+body .mejs-controls .mejs-time-rail .mejs-time-current {
+  background: #333;
+}
+body .mejs-offscreen,
+body .mejs-time-float  {
+    display: none !important;
+}
+body .mejs-controls .mejs-time-rail span, 
+body .mejs-controls .mejs-time-rail a,
+body .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+body .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+    height: 10px;
+}
+body .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+  background: #333;
+}
+body .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+body .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+  top: 9px;
+}
+body .mejs-playpause-button,
+body .mejs-container .mejs-controls .mejs-currenttime-container,
+body .mejs-time.mejs-duration-container {
+    border-right: 2px solid #eee !important;
+    height: 47px !important;
+    width: 50px !important;
+    padding: 0 !important;
+    line-height: 47px;
+    position: relative;
+}
+body .mejs-playpause-button button {
+    left: 0;
+    margin: auto !important;
+    position: absolute !important;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(0px, -50%);
+       -moz-transform: translate(0px, -50%);
+        -ms-transform: translate(0px, -50%);
+         -o-transform: translate(0px, -50%);
+            transform: translate(0px, -50%);
+}
+body .mejs-controls div.mejs-time-rail {
+    border-right: 2px solid #eee;
+    height: 47px;
+    padding: 0;
+}
+body .mejs-button.mejs-volume-button {
+    height: 47px;
+}
+body .mejs-controls .mejs-time-rail .mejs-time-total {
+    margin: 19px 16px;
+}
+body .mejs-button.mejs-playpause-button > button {
+    padding: 8px 0 0 2px;
+    outline: none;
+}
+body .mejs-controls .mejs-button button:focus {
+  outline: none;
+}
+body .mejs-button.mejs-volume-button > button {
+    margin: 3px 0 0 6px;
+    height: 47px;
+}
+body .mejs-button.mejs-playpause-button > button,
+body .mejs-button.mejs-volume-button > button {
+    background: transparent;
+    outline: none;
+}
+.mejs-button.mejs-playpause-button.mejs-play > button:before,
+.mejs-button.mejs-playpause-button.mejs-pause > button:before,
+body .mejs-button.mejs-volume-button.mejs-mute > button:before,
+body .mejs-button.mejs-volume-button.mejs-unmute > button:before {
+    font-size: 16px;
+    content: "\f04b";
+    font-family: 'FontAwesome';
+    color: #333;
+}
+.mejs-button.mejs-playpause-button.mejs-pause > button:before {
+    content: "\f04c";
+    font-family: FontAwesome;
+    font-size: 13px;
+}
+body .mejs-button.mejs-volume-button.mejs-mute > button:before {
+    content: "\f028 ";
+    font-family: FontAwesome;
+}
+body .mejs-button.mejs-volume-button.mejs-unmute > button:before {
+    content: "\f026 ";
+    font-family: FontAwesome;
+}
+body .mejs-controls .mejs-horizontal-volume-slider {
+    margin-top: 10px;
+}

@@ -1,0 +1,205 @@
+[04-Sep-2016 04:33:48 Etc/GMT] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/elecbksb/public_html/main/functions/functions.php on line 6
+[04-Sep-2016 04:33:59 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 38
+[04-Sep-2016 04:33:59 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 39
+[04-Sep-2016 04:33:59 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 42
+[04-Sep-2016 04:33:59 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/login.php on line 44
+[04-Sep-2016 04:34:11 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 38
+[04-Sep-2016 04:34:11 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 39
+[04-Sep-2016 04:34:11 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 42
+[04-Sep-2016 04:34:11 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/login.php on line 44
+[04-Sep-2016 04:34:41 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 38
+[04-Sep-2016 04:34:41 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 39
+[04-Sep-2016 04:34:41 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 42
+[04-Sep-2016 04:34:41 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/login.php on line 44
+[04-Sep-2016 04:34:57 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 38
+[04-Sep-2016 04:34:57 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 39
+[04-Sep-2016 04:34:57 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 42
+[04-Sep-2016 04:34:57 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/login.php on line 44
+[04-Sep-2016 04:35:38 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 38
+[04-Sep-2016 04:35:38 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 39
+[04-Sep-2016 04:35:38 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 42
+[04-Sep-2016 04:35:38 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/login.php on line 44
+[04-Sep-2016 09:40:40 Etc/GMT] PHP Warning:  mysql_connect(): Access denied for user 'elecbksb_admin'@'localhost' (using password: YES) in /home/elecbksb/public_html/main/admin_area/includes/db.php on line 2
+[04-Sep-2016 09:48:38 Etc/GMT] PHP Warning:  mysql_real_escape_string() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 38
+[04-Sep-2016 09:48:38 Etc/GMT] PHP Warning:  mysql_real_escape_string() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 39
+[04-Sep-2016 09:48:47 Etc/GMT] PHP Warning:  mysql_real_escape_string() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 38
+[04-Sep-2016 09:48:47 Etc/GMT] PHP Warning:  mysql_real_escape_string() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 39
+[04-Sep-2016 09:49:44 Etc/GMT] PHP Warning:  mysql_real_escape_string() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 38
+[04-Sep-2016 09:49:44 Etc/GMT] PHP Warning:  mysql_real_escape_string() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/login.php on line 39
+[04-Sep-2016 10:18:02 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 69
+[04-Sep-2016 10:18:02 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 72
+[04-Sep-2016 10:18:02 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 100
+[04-Sep-2016 10:18:02 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 103
+[04-Sep-2016 10:18:02 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 131
+[04-Sep-2016 10:18:02 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 134
+[04-Sep-2016 10:18:02 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 163
+[04-Sep-2016 10:18:02 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 166
+[04-Sep-2016 10:22:09 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 68
+[04-Sep-2016 10:22:09 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 71
+[04-Sep-2016 10:24:39 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 69
+[04-Sep-2016 10:24:39 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 72
+[04-Sep-2016 10:24:39 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 100
+[04-Sep-2016 10:24:39 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 103
+[04-Sep-2016 10:24:39 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 131
+[04-Sep-2016 10:24:39 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 134
+[04-Sep-2016 10:24:39 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 163
+[04-Sep-2016 10:24:39 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 166
+[04-Sep-2016 10:24:50 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 68
+[04-Sep-2016 10:24:50 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 71
+[04-Sep-2016 10:24:55 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 68
+[04-Sep-2016 10:24:55 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 71
+[04-Sep-2016 10:51:11 Etc/GMT] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /home/elecbksb/public_html/main/functions/functions.php on line 6
+[04-Sep-2016 13:42:08 Etc/GMT] PHP Parse error:  syntax error, unexpected ';' in /home/elecbksb/public_html/main/admin_area/view_orders.php on line 88
+[04-Sep-2016 13:42:12 Etc/GMT] PHP Parse error:  syntax error, unexpected ';' in /home/elecbksb/public_html/main/admin_area/view_orders.php on line 88
+[05-Sep-2016 05:04:03 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 69
+[05-Sep-2016 05:04:03 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 72
+[05-Sep-2016 05:04:03 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 100
+[05-Sep-2016 05:04:03 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 103
+[05-Sep-2016 05:04:03 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 131
+[05-Sep-2016 05:04:03 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 134
+[05-Sep-2016 05:04:03 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 163
+[05-Sep-2016 05:04:03 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 166
+[05-Sep-2016 05:04:48 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 68
+[05-Sep-2016 05:04:48 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 71
+[05-Sep-2016 05:04:51 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 68
+[05-Sep-2016 05:04:51 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 71
+[05-Sep-2016 05:04:54 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 68
+[05-Sep-2016 05:04:54 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 71
+[05-Sep-2016 09:53:10 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 69
+[05-Sep-2016 09:53:10 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 72
+[05-Sep-2016 09:53:10 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 100
+[05-Sep-2016 09:53:10 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 103
+[05-Sep-2016 09:53:10 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 131
+[05-Sep-2016 09:53:10 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 134
+[05-Sep-2016 09:53:10 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 163
+[05-Sep-2016 09:53:10 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 166
+[05-Sep-2016 09:56:35 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 69
+[05-Sep-2016 09:56:35 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 72
+[05-Sep-2016 09:56:35 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 100
+[05-Sep-2016 09:56:35 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 103
+[05-Sep-2016 09:56:35 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 131
+[05-Sep-2016 09:56:35 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 134
+[05-Sep-2016 09:56:35 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 163
+[05-Sep-2016 09:56:35 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 166
+[05-Sep-2016 09:56:40 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 68
+[05-Sep-2016 09:56:40 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/view_products.php on line 71
+[05-Sep-2016 09:57:02 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 69
+[05-Sep-2016 09:57:02 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 72
+[05-Sep-2016 09:57:02 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 100
+[05-Sep-2016 09:57:02 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 103
+[05-Sep-2016 09:57:02 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 131
+[05-Sep-2016 09:57:02 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 134
+[05-Sep-2016 09:57:02 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 163
+[05-Sep-2016 09:57:02 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/main/admin_area/insert_products.php on line 166
+[05-Sep-2016 11:05:13 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 23
+[05-Sep-2016 11:05:13 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 25
+[05-Sep-2016 11:07:24 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 23
+[05-Sep-2016 11:07:24 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 25
+[05-Sep-2016 11:07:24 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 91
+[05-Sep-2016 11:07:24 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 94
+[05-Sep-2016 11:07:24 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 122
+[05-Sep-2016 11:07:24 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 125
+[05-Sep-2016 11:07:24 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 153
+[05-Sep-2016 11:07:24 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 156
+[05-Sep-2016 11:07:24 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 185
+[05-Sep-2016 11:07:24 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 188
+[05-Sep-2016 11:07:33 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 23
+[05-Sep-2016 11:07:33 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 25
+[05-Sep-2016 11:07:33 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 91
+[05-Sep-2016 11:07:33 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 94
+[05-Sep-2016 11:07:33 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 122
+[05-Sep-2016 11:07:33 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 125
+[05-Sep-2016 11:07:33 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 153
+[05-Sep-2016 11:07:33 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 156
+[05-Sep-2016 11:07:33 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 185
+[05-Sep-2016 11:07:33 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 188
+[05-Sep-2016 11:07:43 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 23
+[05-Sep-2016 11:07:43 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 25
+[05-Sep-2016 11:07:43 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 91
+[05-Sep-2016 11:07:43 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 94
+[05-Sep-2016 11:07:43 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 122
+[05-Sep-2016 11:07:43 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 125
+[05-Sep-2016 11:07:43 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 153
+[05-Sep-2016 11:07:43 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 156
+[05-Sep-2016 11:07:43 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 185
+[05-Sep-2016 11:07:43 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 188
+[05-Sep-2016 11:08:58 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 23
+[05-Sep-2016 11:08:58 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 25
+[05-Sep-2016 11:08:58 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 91
+[05-Sep-2016 11:08:58 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 94
+[05-Sep-2016 11:08:58 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 122
+[05-Sep-2016 11:08:58 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 125
+[05-Sep-2016 11:08:58 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 153
+[05-Sep-2016 11:08:58 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 156
+[05-Sep-2016 11:08:58 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 185
+[05-Sep-2016 11:08:58 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 188
+[05-Sep-2016 11:12:02 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 23
+[05-Sep-2016 11:12:02 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 25
+[05-Sep-2016 11:12:14 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 23
+[05-Sep-2016 11:12:14 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 25
+[05-Sep-2016 11:13:39 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 298
+[05-Sep-2016 11:14:29 Etc/GMT] PHP Warning:  mysql_query() expects parameter 1 to be string, resource given in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 298
+[05-Sep-2016 11:15:21 Etc/GMT] PHP Parse error:  syntax error, unexpected '{' in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 298
+[05-Sep-2016 11:15:24 Etc/GMT] PHP Parse error:  syntax error, unexpected '{' in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 298
+[05-Sep-2016 11:15:34 Etc/GMT] PHP Parse error:  syntax error, unexpected '{' in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 298
+[05-Sep-2016 11:15:40 Etc/GMT] PHP Parse error:  syntax error, unexpected '{' in /home/elecbksb/public_html/main/admin_area/edit_pro.php on line 298
+[05-Sep-2016 11:51:20 Etc/GMT] PHP Notice:  Undefined variable: newFileName in /home/elecbksb/public_html/main/admin_area/doctest.php on line 141
+[30-Oct-2016 13:41:50 Etc/GMT] PHP Warning:  include(view_soft.php): failed to open stream: No such file or directory in /home/elecbksb/public_html/admin_area/index.php on line 207
+[30-Oct-2016 13:41:50 Etc/GMT] PHP Warning:  include(view_soft.php): failed to open stream: No such file or directory in /home/elecbksb/public_html/admin_area/index.php on line 207
+[30-Oct-2016 13:41:50 Etc/GMT] PHP Warning:  include(): Failed opening 'view_soft.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/elecbksb/public_html/admin_area/index.php on line 207
+[30-Oct-2016 13:55:41 Etc/GMT] PHP Parse error:  syntax error, unexpected ')' in /home/elecbksb/public_html/admin_area/multi_upload2.php on line 140
+[30-Oct-2016 13:55:47 Etc/GMT] PHP Parse error:  syntax error, unexpected ')' in /home/elecbksb/public_html/admin_area/multi_upload2.php on line 140
+[30-Oct-2016 13:55:54 Etc/GMT] PHP Parse error:  syntax error, unexpected ')' in /home/elecbksb/public_html/admin_area/multi_upload2.php on line 140
+[30-Oct-2016 13:57:05 Etc/GMT] PHP Parse error:  syntax error, unexpected ')' in /home/elecbksb/public_html/admin_area/multi_upload2.php on line 140
+[30-Oct-2016 13:57:06 Etc/GMT] PHP Parse error:  syntax error, unexpected ')' in /home/elecbksb/public_html/admin_area/multi_upload2.php on line 140
+[30-Oct-2016 13:58:57 Etc/GMT] PHP Parse error:  syntax error, unexpected ')' in /home/elecbksb/public_html/admin_area/multi_upload2.php on line 140
+[30-Oct-2016 13:59:01 Etc/GMT] PHP Parse error:  syntax error, unexpected ')' in /home/elecbksb/public_html/admin_area/multi_upload2.php on line 140
+[30-Oct-2016 13:59:50 Etc/GMT] PHP Warning:  include(/home/elecbksb/public_html/admin_area/multi_upload2.php): failed to open stream: No such file or directory in /home/elecbksb/public_html/admin_area/index.php on line 228
+[30-Oct-2016 13:59:50 Etc/GMT] PHP Warning:  include(): Failed opening 'multi_upload2.php' for inclusion (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/elecbksb/public_html/admin_area/index.php on line 228
+[31-Oct-2016 06:59:09 Etc/GMT] PHP Notice:  Undefined index: soft_code in /home/elecbksb/public_html/admin_area/edit_soft.php on line 148
+[31-Oct-2016 06:59:53 Etc/GMT] PHP Notice:  Undefined index: soft_code in /home/elecbksb/public_html/admin_area/edit_soft.php on line 148
+[31-Oct-2016 07:00:45 Etc/GMT] PHP Notice:  Undefined index: soft_code in /home/elecbksb/public_html/admin_area/edit_soft.php on line 148
+[03-Nov-2016 14:45:32 Etc/GMT] PHP Notice:  Undefined variable: newFileName in /home/elecbksb/public_html/admin_area/doctest.php on line 141
+[28-Jan-2017 19:35:46 Etc/GMT] PHP Notice:  Undefined variable: disc in /home/elecbksb/public_html/admin_area/invoice-reprint.php on line 58
+[28-Jan-2017 19:35:46 Etc/GMT] PHP Notice:  Undefined variable: total in /home/elecbksb/public_html/admin_area/invoice-reprint.php on line 58
+[28-Jan-2017 19:35:46 Etc/GMT] PHP Notice:  Undefined variable: real_total in /home/elecbksb/public_html/admin_area/invoice-reprint.php on line 58
+[19-Mar-2017 21:03:28 Etc/GMT] PHP Notice:  Undefined variable: newFileName in /home/elecbksb/public_html/admin_area/doctest.php on line 141
+[19-Apr-2017 19:28:32 Etc/GMT] PHP Notice:  Undefined variable: newFileName in /home/elecbksb/public_html/admin_area/doctest.php on line 141
+[02-May-2017 18:09:45 Etc/GMT] PHP Notice:  Undefined index: pass in /home/elecbksb/public_html/admin_area/invoice.php on line 7
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_id in /home/elecbksb/public_html/admin_area/edit_pro.php on line 80
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_title in /home/elecbksb/public_html/admin_area/edit_pro.php on line 84
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_cat1 in /home/elecbksb/public_html/admin_area/edit_pro.php on line 89
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_cat2 in /home/elecbksb/public_html/admin_area/edit_pro.php on line 120
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_cat3 in /home/elecbksb/public_html/admin_area/edit_pro.php on line 151
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_cat4 in /home/elecbksb/public_html/admin_area/edit_pro.php on line 183
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_price in /home/elecbksb/public_html/admin_area/edit_pro.php on line 233
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_diy in /home/elecbksb/public_html/admin_area/edit_pro.php on line 238
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_desc in /home/elecbksb/public_html/admin_area/edit_pro.php on line 243
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_hs in /home/elecbksb/public_html/admin_area/edit_pro.php on line 249
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_high in /home/elecbksb/public_html/admin_area/edit_pro.php on line 255
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_keywords in /home/elecbksb/public_html/admin_area/edit_pro.php on line 259
+[11-May-2017 03:50:41 Etc/GMT] PHP Notice:  Undefined variable: product_where in /home/elecbksb/public_html/admin_area/edit_pro.php on line 265
+[26-Jun-2017 11:41:15 Etc/GMT] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/elecbksb/public_html/admin_area/edit_comp.php on line 121
+[26-Jun-2017 11:41:20 Etc/GMT] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/elecbksb/public_html/admin_area/edit_comp.php on line 121
+[26-Jun-2017 11:42:35 Etc/GMT] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/elecbksb/public_html/admin_area/edit_comp.php on line 121
+[26-Jun-2017 11:42:49 Etc/GMT] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/elecbksb/public_html/admin_area/edit_comp.php on line 121
+[26-Jun-2017 11:46:26 Etc/GMT] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/elecbksb/public_html/admin_area/edit_comp.php on line 121
+[26-Jun-2017 11:46:45 Etc/GMT] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/elecbksb/public_html/admin_area/edit_comp.php on line 121
+[04-Jul-2017 04:19:48 Etc/GMT] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/elecbksb/public_html/admin_area/view_c_report.php on line 74
+[28-Aug-2017 15:03:06 Etc/GMT] PHP Notice:  Undefined variable: newFileName in /home/elecbksb/public_html/admin_area/doctest.php on line 141
+[28-Aug-2017 15:03:06 Etc/GMT] PHP Notice:  Undefined variable: insert_product in /home/elecbksb/public_html/admin_area/doctest.php on line 152
+[28-Aug-2017 15:03:21 Etc/GMT] PHP Notice:  Undefined variable: newFileName in /home/elecbksb/public_html/admin_area/doctest.php on line 141
+[09-Sep-2017 05:43:01 Etc/GMT] PHP Warning:  require_once(Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/elecbksb/public_html/admin_area/clan_project.php on line 183
+[09-Sep-2017 05:43:01 Etc/GMT] PHP Fatal error:  require_once(): Failed opening required 'Classes/PHPExcel.php' (include_path='.:/opt/alt/php54/usr/share/pear:/opt/alt/php54/usr/share/php') in /home/elecbksb/public_html/admin_area/clan_project.php on line 183
+[09-Sep-2017 05:45:31 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/admin_area/clan_project.php on line 220
+[09-Sep-2017 05:45:31 Etc/GMT] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/admin_area/clan_project.php on line 224
+[09-Sep-2017 05:47:12 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/admin_area/clan_project.php on line 220
+[09-Sep-2017 05:47:12 Etc/GMT] PHP Warning:  mysqli_error() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/admin_area/clan_project.php on line 224
+[09-Sep-2017 05:52:52 Etc/GMT] PHP Notice:  Undefined variable: newFileName in /home/elecbksb/public_html/admin_area/insert_proj_doc.php on line 139
+[09-Sep-2017 05:55:29 Etc/GMT] PHP Warning:  move_uploaded_file(design_doc/Elecbits_project_Elecbits_lfr_synopsis.doc): failed to open stream: No such file or directory in /home/elecbksb/public_html/admin_area/insert_proj_doc.php on line 119
+[09-Sep-2017 05:55:29 Etc/GMT] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpdK5A56' to 'design_doc/Elecbits_project_Elecbits_lfr_synopsis.doc' in /home/elecbksb/public_html/admin_area/insert_proj_doc.php on line 119
+[21-Sep-2017 05:50:34 Etc/GMT] PHP Notice:  Undefined index: pass in /home/elecbksb/public_html/admin_area/invoice.php on line 7
+[02-Oct-2017 06:44:04 Etc/GMT] PHP Notice:  Undefined index: pass in /home/elecbksb/public_html/admin_area/invoice.php on line 7
+[02-Oct-2017 06:44:22 Etc/GMT] PHP Notice:  Undefined index: pass in /home/elecbksb/public_html/admin_area/invoice.php on line 7
+[03-Oct-2017 12:52:05 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/elecbksb/public_html/admin_area/accept_list.php on line 68
+[03-Oct-2017 12:52:05 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/elecbksb/public_html/admin_area/accept_list.php on line 71

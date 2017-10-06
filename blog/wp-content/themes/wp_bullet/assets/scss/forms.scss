@@ -1,0 +1,22 @@
+input, select, textarea{
+	border:1px solid $light;
+	padding: 10px 12px;	
+	line-height: normal;
+}
+input[type="text"],input[type="email"],select, textarea{width: 100%;}
+input,
+textarea{
+	&:hover,
+	&:focus,
+	&:active{
+		border-color:$primary_color;
+		outline: none;
+		color: $black;	
+	}
+	
+}
+textarea{
+	resize:none;
+}
+form{
+}

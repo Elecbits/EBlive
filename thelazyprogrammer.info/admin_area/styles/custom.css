@@ -1,0 +1,246 @@
+#tag61.col-lg-6
+{
+	padding: 10px 0px 0px 30px;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	background-color: white;
+	font-size: 14px;
+}
+
+#tag42.col-lg-4
+{
+	padding: 21px 0px 15px 30px;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	background-color: white;
+	font-size: 12px;
+}
+
+#tag121.col-lg-12
+{
+	padding: 21px 0px 15px 30px;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	font-size: 12px;
+	background-color: white;
+}
+
+#tag122.col-lg-12
+{
+	padding: 21px 0px 0px 30px;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
+	font-size: 12px;
+	background-color: white;
+}
+
+
+#tag124.col-lg-12
+{
+	padding: 21px 0px 20px 30px;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	font-size: 20px;
+	background-color:#0070FF ;
+}
+
+#tag125.col-lg-12
+{
+	padding: 21px 0px 20px 30px;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	font-size: 20px;
+	background-color:#0070FF ;
+}
+
+#tag31.col-lg-3
+{
+	padding: 21px 100px 20px 0px;
+	font-family: 'Montserrat', sans-serif;
+	color: black;
+	font-size: 14px;
+	
+}
+
+#pb1.panel-body
+{
+	padding: 30px 10px 100px 10px;
+	border-radius: 25px;
+	
+
+}
+
+.borderless table 
+{
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}
+
+.glyphicon
+ {
+    font-size: 24px;
+
+ }   
+#g2.glyphicon
+ {
+    font-size: 12px;
+
+ }
+
+ #g3.glyphicon
+ {
+    font-size: 14px;
+
+ }   
+
+/* unvisited link */
+#topbar a:link {
+    color: black;
+    
+}
+
+/* visited link */
+#topbar a:visited {
+    color: green;
+}
+
+/* mouse over link */
+#topbar a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+#topbar a:active
+ {
+    color: blue;
+}
+
+#topbar a:link {
+    color: black;
+    
+}
+
+/* unvisited link */
+#allp a:link {
+    color: black;
+    
+}
+
+/* visited link */
+#allp a:visited {
+    color: black;
+}
+
+/* mouse over link */
+#allp a:hover {
+    color: black;
+}
+
+/* selected link */
+#allp a:active
+ {
+    color: black;
+}
+
+#allp a:link {
+    color: black;
+    
+}
+
+
+/* visited link */
+#navibar a:visited {
+    color: green;
+}
+
+/* mouse over link */
+#navibar a:hover {
+    color: blue;
+}
+
+/* selected link */
+#navibar a:active
+ {
+    color: black;
+}
+
+#navibar a:link {
+    color: black;
+    
+}
+
+
+#navibar2 a:visited {
+    color: green;
+}
+
+/* mouse over link */
+#navibar2 a:hover {
+    color: blue;
+}
+
+/* selected link */
+#navibar2 a:active
+ {
+    color: black;
+}
+
+#navibar2 a:link {
+    color: white;
+    
+}
+
+
+#footbar a:active
+ {
+    color: white;
+}
+
+#footbar a:link {
+    color: white;
+    
+}
+
+
+#footbar a:visited {
+    color: white;
+}
+
+/* mouse over link */
+#footbar a:hover {
+    color: white;
+}
+
+
+#cf1.container-fluid
+{
+	padding-right:0px;
+	padding-left:0px;
+	background-color: #0070FF;
+	
+}
+
+
+
+
+
+.container-fluid
+{
+	padding-right:0px;padding-left:0px;margin-right:auto;margin-left:auto
+}
+
+
+.blocks {
+    display: inline-block;
+    border: solid 1px red;
+    width: 100px;
+    background-color: white;
+}
+
+#pb1.panel-body
+{
+	padding: 100px 10px 10px 10px;
+	border-radius: 25px;
+}

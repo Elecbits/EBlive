@@ -1,0 +1,80 @@
+.features{
+background: black;
+padding: 80px 0;
+}
+.features .single {
+background: rgba(255, 255, 255, 0.2);
+border: 1px solid rgba(255, 255, 255, 0.1);
+text-align: center;
+position: relative;
+padding: 40px 20px;
+margin: 50px auto 80px auto;
+-webkit-transition: 0.4s ease-in-out;
+-moz-transition: 0.4s ease-in-out;
+-ms-transition: 0.4s ease-in-out;
+transition: 0.4s ease-in-out; }
+.features .single h2 {
+font-size: 20px;
+text-transform: uppercase;
+color: #fff;
+margin-bottom: 20px;
+margin-top: 60px; }
+.features .single h2:after {
+content: '';
+width: 80px;
+height: 5px;
+margin: 20px auto;
+display: block;
+border-top: 1px solid #f0f0f0;
+border-bottom: 1px solid #f0f0f0; }
+.features .single p{
+color: rgba(255, 255, 255, 0.7);
+line-height: 24px;
+}
+.features .single .icon-outer {
+position: absolute;
+width: 100px;
+height: 100px;
+background: rgba(0, 0, 0, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.3);
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+top: 0;
+margin-top: -50px;
+left: 50%;
+margin-left: -50px;
+-webkit-transition: 0.4s ease-in-out;
+-moz-transition: 0.4s ease-in-out;
+-ms-transition: 0.4s ease-in-out;
+transition: 0.4s ease-in-out; }
+.features .single .icon-outer .icon {
+border: 1px solid rgba(255, 255, 255, 0.3);
+width: 60px;
+height: 60px;
+margin: 20px auto; }
+.features .single .icon-outer .icon i {
+line-height: 60px;
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-ms-transform: rotate(-45deg);
+transform: rotate(-45deg);
+color: #fff;
+font-size: 20px; }
+.features .single:hover {
+background: #243c4f; }
+.features .single:hover h2 {
+color: #fff; }
+.features .single:hover h2:after {
+border-color: rgba(255, 255, 255, 0.3); }
+.features .single:hover p {
+color: rgba(255, 255, 255, 0.8); }
+.features .single:hover .icon-outer {
+background: #243c4f;
+border-color: rgba(255, 255, 255, 0.2);
+margin-top: -60px; }
+.features .single:hover .icon-outer .icon {
+border-color: rgba(255, 255, 255, 0.2); }
+.features .single:hover .icon-outer .icon i {
+color: white; }

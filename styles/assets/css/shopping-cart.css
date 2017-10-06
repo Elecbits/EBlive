@@ -1,0 +1,370 @@
+.shopping-cart {
+	padding: 54px 0 176px;
+
+}
+
+.shopping-cart .total-cart {
+	color: #3b3e47;
+	font-size: 14px;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+.shopping-cart .total-cart i {
+	margin-right: 10px;
+	color: #8ecc3b;
+}
+.shopping-cart .cart-wrap {
+	padding-left: 20px;
+	background: #fafcff;
+}
+
+.shopping-cart .cart-wrap ul {
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid #eaeff7;
+	margin: 0;
+	padding: 0;
+}
+.shopping-cart .cart-wrap ul:last-child{
+	border:none
+}
+.shopping-cart .head-title {
+	height: 75px;
+}
+.shopping-cart  .product-cart {
+	height: 103px;
+}
+.shopping-cart .cart-wrap li {
+	display: table-cell;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #868c9e;
+	font-family: 'Oswald', sans-serif;
+	vertical-align: middle;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+.shopping-cart .head-title li {
+	color: #3b3e47;
+}
+.shopping-cart .product-pic {
+	display: inline-block;
+	vertical-align: middle;
+}
+.shopping-cart .product-pic img{
+	max-width:60px;
+}
+.shopping-cart .product-name {
+	font-size: 14px;
+	line-height: 1.2;
+	display: inline-block;
+	vertical-align: middle;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	padding-left: 21px;
+}
+.shopping-cart .item-number {
+	width: 114px;
+	height: 36px;
+	border: 1px solid #eef1f5;
+	overflow: hidden;
+	text-align: center;
+	background: #fff;
+}
+.shopping-cart .item-number span {
+	font-size:21px;
+	line-height: 31px;
+	vertical-align: middle;
+	font-family: 'Oswald', sans-serif;
+	cursor:pointer;
+}
+.shopping-cart .item-number span, .shopping-cart .product-value {
+	width: 33.33%;
+	float: left;
+	height: 36px;
+}
+.shopping-cart .product-value {
+	text-align: center;
+	border: none;
+	border-left: 1px solid #eef1f5;
+	border-right: 1px solid #eef1f5;
+}
+.shopping-cart .product-name a {
+	color: #3b3e47;
+}
+.shopping-cart .remove-product {
+	font-size: 18px;
+	line-height: 18px;
+	color: #868c9e;
+	cursor: pointer;
+}
+.shopping-cart .remove-product:hover {
+	color: #f42b2b;
+}
+.shopping-cart .block-1 {
+	width: 38%;
+}
+.shopping-cart .block-2 {
+	width: 16%;
+}
+.shopping-cart .block-3 {
+	width: 23%;
+}
+.shopping-cart .block-4 {
+	width: 15%;
+}
+.coupen-code input, .field-block select {
+	border: 1px solid #eaeff7;
+	width: 100%;
+	height: 41px;
+	color: #868c9e;
+	font-family: 'Oswald', sans-serif;
+	padding: 0 16px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 400;
+}
+.shopping-cart .coupen-code {
+	background: #fafcff;
+	padding-bottom: 25px;
+	overflow: hidden;
+}
+.shopping-cart .block-heading {
+	padding-left: 22px;
+	padding-top: 30px;
+	margin-bottom: 27px;
+}
+.shopping-cart .coupen-code form {
+
+	border-top: 1px solid #ebf0f8;
+	padding: 31px 25px;
+}
+
+.shopping-cart .coupen-btn {
+	float: right;
+	margin-top: 22px;
+	padding: 0 25px;
+	height: 38px;
+	line-height: 38px;
+	background: #868c9e;
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: 400;
+	font-family: 'Oswald', sans-serif;
+	border: none;
+}
+.shopping-cart .coupen-btn:hover {
+	background: #8ecc3b;
+	color: #fff;
+}
+.shipping-detail,.total-cost {
+	    background: #fafcff;
+	    padding-bottom:20px;
+}
+.shipping-detail form {
+	padding: 30px 24px 0;
+}
+.shipping-btn {
+	margin-top: 1px;
+}
+.shopping-cart .field-block {
+	margin-bottom: 21px;
+}
+.shopping-cart .select-box .field-block {
+	float: left;
+	width: 50%;
+}
+.shopping-cart .select-box .field-block:first-child {
+	padding-right: 8px;
+}
+.shopping-cart .select-box .field-block:last-child {
+	padding-left: 8px;
+}
+.shopping-cart .top-space {
+	margin-top: 45px;
+}
+.shopping-cart .total-cost ul {
+	padding: 0 26px;
+}
+.shopping-cart .total-cost .btn-group {
+	width: 100%;
+	margin-top: 18px;
+}
+.shopping-cart .total-cost .btn-group .shipping-btn {
+	margin-right: 28px;
+}
+.shopping-cart .total-cost ul li {
+	overflow: hidden;
+	color: #868c9e;
+	font-size: 14px;
+	font-weight: 400;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	padding-top: 19px;
+}
+.total-cost ul li span:first-child {
+	float: left;
+}
+.total-cost ul li span:last-child {
+	float: right;
+}
+
+/*==================Trainer Detail=====================*/
+.trainer-detail{
+	padding-top: 52px;
+}
+.trainer-detail .trainer-pic img{
+	width:100%;
+}
+.trainer-detail .trainer-name h2{
+	color: #3b3e47;
+	font-size: 30px;
+	font-weight: 400;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	padding-top:0;
+	 display:inline-block;
+}
+.trainer-detail .trainer-name{
+	    padding-top:9px;
+	    padding-bottom: 30px;
+}
+.trainer-detail .exp-btn{
+	    margin-left: 12px;
+    font-size: 12px;
+    line-height: 28px;
+    padding: 3px 16px 0;
+    position: relative;
+    vertical-align: top;
+}
+.trainer-detail .trainer-name strong{
+	    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 10px;
+    color:#8ecc3b;
+}
+.trainer-detail .trainer-info p{
+	    padding-bottom: 24px;
+}
+.trainer-detail .trainer-contact{
+	padding-top: 27px;
+    padding-left: 62px;
+    position:relative;
+}
+.trainer-detail .phone-btn{
+	    position: absolute;
+    left: 0;
+    top: 25px;
+    font-size: 42px;
+    color:#6775de;
+    border-right: 1px solid #dde0ea;
+    padding-right: 12px;
+    padding-top: 10px;
+}
+.trainer-detail .trainer-contact a {
+	 color:#6775de;
+}
+.trainer-detail .trainer-contact a,.trainer-detail .trainer-contact span{
+	    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    padding-top: 7px;
+    display: block;
+    text-transform:uppercase;
+}
+.trainer-detail .trainer-contact span{
+	    font-size: 14px;
+	        padding-top: 0;
+	        display: inline-block;
+	         color:#868c9e; 
+}
+.trainer-detail .trainer-contact span span{
+	color:#3b3e47; 
+}
+.video-block{
+	    margin-top: 25px;
+	    background:#6775de;
+	    position:relative;
+}
+.trainer-detail .video-block img{
+	display:block;
+	opacity:0.18;
+	width:100%;
+}
+
+.trainer-detail .play-btn{
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	font-size:42px;
+	color:#fff;
+	 cursor:pointer;
+}
+.trainer-detail .benifit-yoga h3{
+    font-size: 21px;
+    padding: 15px 0 17px;
+    border-bottom: 1px solid #e5e8f1;
+    margin-bottom: 16px;
+}
+.trainer-detail .catgory-list {
+    padding-top:0;
+}
+.trainer-detail .catgory-list li{
+	font-size:15px;
+	color:#818799
+}
+.trainer-detail .top-space{
+	margin-top:74px;
+	margin-bottom: 86px;
+}
+.trainer-detail .head-global{
+	margin-bottom: 38px;
+}
+/*================Trainers page============*/
+.homepage-4 .trainers-block .latest-news-home_two {
+	background:none;
+	  padding-top:40px;
+}
+.homepage-4 .trainers-block .classes-content{
+	background:#f1f3f7;
+	padding-left:22px;
+}
+
+@media (max-width:991px){
+	.trainer-detail .phone-btn{
+		  font-size: 29px;
+		  padding-right: 8px;
+	}
+	.trainer-detail .trainer-contact span{
+		 font-size: 12px;
+	}
+	.trainer-detail .trainer-contact a, .trainer-detail .trainer-contact span{
+		font-size: 17px;
+	}
+}
+@media (max-width:767px){
+	.trainer-detail .phone-btn{
+		  font-size: 29px;
+		  padding-right: 8px;
+	}
+	.trainer-detail .trainer-contact span{
+		 font-size: 12px;
+	}
+	.trainer-detail .trainer-contact a, .trainer-detail .trainer-contact span{
+		font-size: 17px;
+	}
+	.trainer-pic {
+		margin-bottom:20px;
+	}
+	.trainers-block .classes-listing-wrap{
+		margin-bottom:40px;
+	}
+	.homepage-4 .trainers-block .top_gap {
+    margin-top:0;
+}
+}

@@ -1,0 +1,4 @@
+[25-Jan-2017 03:21:05 Etc/GMT] PHP Warning:  mysql_connect(): Access denied for user 'elecbksb_aurav'@'localhost' (using password: YES) in /home/elecbksb/public_html/api/conn.php on line 6
+[25-Jan-2017 03:41:21 Etc/GMT] PHP Parse error:  syntax error, unexpected '{' in /home/elecbksb/public_html/api/showproduct.php on line 31
+[25-Jan-2017 03:55:34 Etc/GMT] PHP Notice:  Undefined variable: run_query in /home/elecbksb/public_html/api/showproduct.php on line 23
+[25-Jan-2017 03:55:34 Etc/GMT] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home/elecbksb/public_html/api/showproduct.php on line 23

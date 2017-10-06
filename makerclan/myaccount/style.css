@@ -1,0 +1,325 @@
+/**
+ * Body CSS
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #eee;
+}
+
+html,
+body,
+input,
+textarea,
+buttons {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+
+
+/**
+ * Layout CSS
+ */
+
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  transition: left 0.2s;
+}
+
+.elec-logo{
+      max-width: 154px;
+    }
+
+#sidedrawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  left: -200px;
+  overflow: auto;
+  z-index: 2;
+  background-color: #fff;
+  transition: transform 0.2s;
+  border-right: 1px solid rgba(0,0,0,0.12);
+}
+
+#content-wrapper {
+  min-height: 100%;
+  overflow-x: hidden;
+  margin-left: 0px;
+  transition: margin-left 0.2s;
+  
+  /* sticky bottom */
+  box-sizing: border-box;
+  margin-bottom: -160px;
+  padding-bottom: 160px;
+}
+
+#footer {
+  box-sizing: border-box;
+  height: 160px;
+  margin-left: 0px;
+  transition: margin-left 0.2s;
+}
+
+@media (min-width: 768px) {
+  #header {
+    left: 200px;
+  }
+  
+  #sidedrawer {
+    transform: translate(200px);
+  }
+  
+  #content-wrapper {
+    margin-left: 200px;
+  }
+  
+  #footer {
+    margin-left: 200px;
+  }
+  
+  body.hide-sidedrawer #header {
+    left: 0;
+  }
+  
+  body.hide-sidedrawer #sidedrawer {
+    transform: translate(0px);
+  }
+  
+  body.hide-sidedrawer #content-wrapper {
+    margin-left: 0;
+  }
+  
+  body.hide-sidedrawer #footer {
+    margin-left: 0;
+  }
+}
+
+
+/**
+ * Toggle Sidedrawer
+ */
+#sidedrawer.active {
+  transform: translate(200px);
+}
+
+
+/**
+ * Header CSS
+ */
+
+.sidedrawer-toggle {
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+  margin-right: 10px;
+}
+
+.sidedrawer-toggle:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/**
+ * Sidedrawer CSS
+ */
+
+#sidedrawer-brand {
+  padding-left: 20px;
+}
+
+#sidedrawer ul {
+  list-style: none;
+}
+
+#sidedrawer > ul {
+  padding-left: 0px;
+}
+
+#sidedrawer > ul > li:first-child {
+  padding-top: 15px;
+}
+
+#sidedrawer strong {
+  display: block;
+  padding: 15px 22px;
+  cursor: pointer;
+}
+
+#sidedrawer strong:hover {
+  background-color: #E0E0E0;
+}
+
+#sidedrawer strong + ul > li {
+  padding: 6px 0px;
+}
+
+
+/**
+ * Footer CSS
+ */
+
+#footer {
+  background-color: #0288D1;
+  color: #fff;
+}
+
+#footer a {
+  color: #fff;
+  text-decoration: underline;
+} 
+
+.dropdown{
+  float: right; 
+}
+
+.open>.dropdown-menu {
+    display: block;
+    top: 50px;
+    left: -66px;
+}
+
+
+.mdl-card + .mdl-card {
+  margin-top: 40px;
+}
+
+// Card styles
+
+.mdl-card--horizontal {
+  flex-direction: column;
+  height: 1vh; /* 1 */
+  padding-left: 150px;
+  width: 100%;
+  
+  .mdl-card__media {
+    left: 0;
+    position: absolute;
+    width: 150px;
+  }
+  
+  .mdl-card__supporting-text {
+    flex: 1 1 auto;
+    width: auto;
+  }
+}
+
+.mdl-card--horizontal-2 {
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 0px;
+  
+  .mdl-card__title {
+    align-items: flex-start;
+    flex-direction: column;
+    flex: 1 auto;
+    float: left;
+  }
+  .mdl-card__title-text {
+    align-self: flex-start;
+  }
+  .mdl-card__media {
+    flex: 0 auto; 
+    float: right;
+    height: 112px;
+    margin: 16px 16px 0 0;
+    width: 112px;
+  }
+  .mdl-card__actions {
+    clear: both;
+    flex: 1 auto; 
+  }
+}
+.maker-card{
+    width: 50%;
+    margin: 2% auto;
+    background-color: white;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.04);
+            transition: box-shadow .3s ease-in-out;
+}
+
+.maker-card:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.maker-card:hover .bid-price{
+  color: blue;
+  }
+
+  .bid-price{
+    transition: color .2s ease-in-out;
+  }
+
+.proj-head{
+  font-family: 'Roboto', sans-serif;
+  font-size: 19px;
+      margin-top: 6px;
+
+}
+.short-desc{
+  margin-right: 10px;
+  height: 45px;
+}
+.bid-btn{
+  float: right;
+    margin: 14px;
+    border: none;
+    width: 110px;
+    height: 30px;
+    background-color: #51ea64;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+}
+.bid-btn:hover{
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .12);
+}
+.bid-div{
+  position: relative;
+}
+.bid-div span{
+  /*position: absolute;*/
+    /*top: 19px;*/
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.detail-btn{
+  float: right;
+    cursor: pointer;
+}
+
+.img-div img{
+  padding: 2%;
+}
+
+@media only screen and (max-width: 992px) {
+    .maker-card {
+    width: 100%;
+    padding: 9px;
+    margin: 9% auto;
+    }
+
+    .img-div{
+      text-align: center;
+    }
+
+    .bid-div{
+      margin-top: 12%;
+    }
+
+    .bid-btn{
+      float: none;
+      margin-left: 0px;
+    }
+}
+
