@@ -40,7 +40,7 @@ else{
     <script src="styles/alp/js/modernizr.custom.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Makerclan - Dashboard</title>
+  <title>Makerclan - My Bids</title>
   <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
@@ -79,7 +79,7 @@ else{
       
       </li>
           <li>
-        <a href="" style="text-decoration: none; color: black;"><strong>Settings</strong></a>
+        <a href="settings.php" style="text-decoration: none; color: black;"><strong>Settings</strong></a>
    
       </li>
     </ul>
@@ -163,7 +163,8 @@ else{
       <th style="text-align: center;">Project</th>
       <th style="text-align: center;">Design</th>
       <th style="text-align: center;">Last Date</th>
-      <th style="text-align: center;">Max Bid</th>
+      <th style="text-align: center;">Your Bid</th>
+
       
     </tr>
   </thead>
@@ -171,7 +172,7 @@ else{
 
  <?php
    
-  $get_pro="SELECT * FROM project_details where project_id NOT IN (SELECT project_id FROM applied_form where user = '$c_email' )";
+  $get_pro="SELECT * FROM applied_form where user = '$c_email'";
 
 $run_pro =mysqli_query($con , $get_pro);
 
@@ -179,7 +180,7 @@ $check_num = mysqli_num_rows($run_pro);
 
 if ($check_num == 0) {
 
-  echo "You have applied to all the projects. Please refer to <a href='my_bids.php'>MY BIDS</a> to view details of your bidding.<br><br> ";
+  echo "You have not applied to any of the projects. Please refer to <a href='index.php'>TRENDING BIDS</a> to view details of your bidding.<br><br>";
   
 }
 
@@ -190,13 +191,22 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
   
 
   $proj_id= $row_pro['project_id'];
-  $proj_title= $row_pro['project_name'];
-  $proj_desc= $row_pro['project_desc'];
-  $proj_doc= $row_pro['design_doc'];
+  $bid = $row_pro['max_bid'];
+  $exp_date = $row_pro['pick_up_date'];
 
-  $max_bid= $row_pro['max_bid'];
-  $proj_raw_materials= $row_pro['raw_materials'];
-  $proj_last_date= $row_pro['last_date'];
+
+
+$proj_info = "SELECT * FROM project_details where project_id = '$proj_id'";
+
+$run_proj_info =mysqli_query($con , $proj_info);
+
+$row_pro_info = mysqli_fetch_array($run_proj_info);
+
+  $proj_title= $row_pro_info['project_name'];
+  $proj_desc= $row_pro_info['project_desc'];
+  $proj_doc= $row_pro_info['design_doc'];
+
+ 
 
 
   $i++;
@@ -217,12 +227,12 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
       </th>
 
       <td style="text-align: center; width: 200px;"><a href="../../admin_area/design_doc/<?php echo $proj_doc;?>"><img src="../../images/downloads.png" width="60" height="60"></a></td>
-      <td style="text-align: center;"><?php echo $proj_last_date ; ?>
+      <td style="text-align: center;"><?php echo $exp_date ; ?>
 </td>
       
-      <td style="text-align: center;">₹ <?php echo $max_bid;  ?>
+      <td style="text-align: center;">₹ <?php echo $bid;  ?>
         <br>
-   <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Make A Bid</button></a>
+   <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Update your application</button></a>
       </td>
 </tr>
 

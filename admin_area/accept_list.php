@@ -40,7 +40,7 @@ include("include/db.php");
 <div class="jumbotron" >
 	
 
-<h3 style=" font-family: 'Montserrat', sans-serif;  padding: 0px 0px 10px 0px; text-align: center; ">PRODUCTS</h3>
+<h3 style=" font-family: 'Montserrat', sans-serif;  padding: 0px 0px 10px 0px; text-align: center; ">ACCEPT LIST</h3>
 
 
 
@@ -51,19 +51,19 @@ include("include/db.php");
     
 
     <tr>
-	    <th>Product ID</th>
-      <th>Product Title</th>
-      <th>Product Price</th>
-      <th>Product Keywords</th>
-      <th>Product Description</th>
-      <th>Edit</th>
+	    <th>Project ID</th>
+      <th>Bid Value</th>
+      <th>Expected Date</th>
+      <th>Raw_material</th>
+      <th>Additional Info</th>
+      <th>Maker Info</th>
       <th>Delete</th>
 
 		
 	</tr>
 	<?php
 
-$get_pro="SELECT * FROM products";
+$get_pro="SELECT * FROM applied_form";
 
 $run_pro =mysqli_query($con, $get_pro);
 
@@ -71,11 +71,14 @@ $i=0;
 while ($row_pro=mysqli_fetch_array($run_pro)) {
   
 
-  $product_id= $row_pro['product_id'];
-  $product_title= $row_pro['product_title'];
-  $product_desc= $row_pro['product_desc'];
-  $product_price= $row_pro['product_price'];
-  $product_keywords= $row_pro['product_keywords'];
+  $product_id= $row_pro['project_id'];
+  $product_bid= $row_pro['max_bid'];
+  $product_date= $row_pro['pick_up_date'];
+  $product_raw= $row_pro['raw_mat_add'];
+  $product_add_info= $row_pro['add_info'];
+  $maker= $row_pro['maker_info'];
+  $user = $row_pro['user'];
+$maker_info = "$user, $maker";
 
   $i++;
 
@@ -83,12 +86,12 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
 ?>
 <tr>
       <td> <?php echo $product_id; ?></td>
-      <td> <?php echo $product_title; ?></td>
-      <td> <?php echo $product_price; ?></td>
-      <td> <?php echo $product_keywords; ?></td>
-      <td> <?php echo $product_desc; ?></td>
-      <td> <a href="index.php?edit_pro=<?php echo $product_id ; ?>" style="color: black; "> Edit </a> </td> 
-       <td> <a href="delete_pro.php?delete_pro=<?php echo $product_id ?>" style="color: black; "> Delete </a> </td>      
+      <td> <?php echo $product_bid; ?></td>
+      <td> <?php echo $product_date; ?></td>
+      <td> <?php echo $product_raw; ?></td>
+      <td> <?php echo $product_add_info; ?></td>
+      <td> <?php echo $maker_info; ?></td>
+     <td> <a href="delete_apply.php?delete_pro=<?php echo $product_id ?>" style="color: black; "> Delete </a> </td>      
 
     
   </tr>
