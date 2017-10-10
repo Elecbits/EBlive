@@ -15,22 +15,8 @@ else{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
+
 
 
 <html>
@@ -60,6 +46,12 @@ else{
     .elec-logo{
       max-width: 154px;
     }
+
+   .form-control{
+    font-size: 15px;
+   }
+
+
   </style>
 </head>
 <body style="font-size: 16px;">
@@ -68,8 +60,8 @@ else{
       <!-- <span class="mui--text-title">Brand.io</span> -->
       <a href="../index.php"><img class="elec-logo" src="logo.png"></a>
     </div>
-    <div class="mui-divider"></div>
-      <ul >
+    <div class="mui-divider" ></div>
+    <ul >
       <li>
       <a href="index.php" style="text-decoration: none; color: black;"><strong>Trending Bids</strong></a>
      
@@ -118,6 +110,11 @@ else{
       while ($row_name_pro = mysqli_fetch_array($run_name_query)) 
     {
         $customer_name = $row_name_pro['name'];
+        $m_contact = $row_name_pro['contact'];
+        $m_pin = $row_name_pro['pincode'];
+        $m_address = $row_name_pro['address'];
+
+        $add_part = explode(",", $m_address);  
      
        echo $customer_name;  }
 
@@ -148,162 +145,106 @@ else{
 
 
       <div class="mui-container-fluid">
-       
-<div  class="col-lg-12 ">
 
+<div class="col-lg-8">
+
+<blockquote class="blockquote" style=" border-style: solid; border-radius: 10px; border-color: #f7f7f7 ; font-size: 20px;  padding: 10px 10px 10px 10px;" >
+  <p class="mb-0" >Edit your profile</p>
+</blockquote>
+
+
+
+
+<form method="post" action="">
+
+<br>
+
+<div style="border-style: solid; border-radius: 10px; border-color: #f7f7f7 ; padding: 20px 20px 20px 20px;">
+
+
+<div class="form-group row">
+  <label for="example-url-input" class="col-2 col-form-label">Name</label>
+  <div class="col-10">
+    <input class="form-control" type="text"  name="name_info" value="<?php echo $customer_name ; ?>" id="example-url-input" required>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-tel-input" class="col-2 col-form-label">Contact</label>
+  <div class="col-10">
+    <input class="form-control" type="tel" name="contact" value="<?php echo $m_contact ; ?>" id="example-tel-input" required> 
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-password-input" class="col-2 col-form-label">Email</label>
+  <div class="col-10">
+    <input class="form-control" type="email"  name="mailid" value="<?php  echo $c_email ; ?>" id="example-password-input" disabled>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-url-input" class="col-2 col-form-label">Flat/House No</label>
+  <div class="col-10">
+    <input class="form-control" type="text"  name="add1" value="<?php  echo $add_part[0] ; ?>" id="example-url-input" required>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-url-input" class="col-2 col-form-label">Street Name</label>
+  <div class="col-10">
+    <input class="form-control" type="text"  name="add2" value="<?php  echo $add_part[1] ; ?>" id="example-url-input" required>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="example-url-input" class="col-2 col-form-label">Area/District</label>
+  <div class="col-10">
+    <input class="form-control" type="text"  name="add3" value="<?php  echo $add_part[2] ; ?>" id="example-url-input" required>
+  </div>
+</div>
+
+
+<div class="form-group row">
+
+  <label for="example-url-input" class="col-2 col-form-label">Your location</label>
+<div style="padding-left: 17px;">
+     <select  name="district" required >
+                      <option value="delhi" selected="selected"><?php  echo $add_part[3] ; ?></option>
+                      <option value="noida">Noida</option>
+                      <option value="Gurgaon">Gurgaon</option>
+                      <option value="Ghaziabad">Ghaziabad</option>
+                      <option value="NCR">Outside NCR</option>
+                    </select>
+</div>
+</div>
+
+
+<div class="form-group row">
+  <label for="example-url-input" class="col-2 col-form-label">Pin Code</label>
+  <div class="col-10">
+    <input class="form-control" type="number"  name="pin" value="<?php  echo $m_pin ; ?>" id="example-url-input" required>
+  </div>
+</div>
+
+
+
+</div>
 
 <br>
 
 
-<table class="table">
-  <thead class="thead-inverse">
-  
-  
-    <tr>
-      <th style="text-align: center;">Project</th>
-      <th style="text-align: center;">Design</th>
-      <th style="text-align: center;">Last Date</th>
-      <th style="text-align: center;">Max Bid</th>
-      
-    </tr>
-  </thead>
-  <tbody>
-
- <?php
-   
-  $get_pro="SELECT * FROM project_details where project_id NOT IN (SELECT project_id FROM applied_form where user = '$c_email' )";
-
-$run_pro =mysqli_query($con , $get_pro);
-
-$check_num = mysqli_num_rows($run_pro);
-
-if ($check_num == 0) {
-
-  echo "You have applied to all the projects. Please refer to <a href='my_bids.php'>MY BIDS</a> to view details of your bidding.<br><br> ";
-  
-}
-
-else 
-
-$i=0;
-while ($row_pro=mysqli_fetch_array($run_pro)) {
-  
-
-  $proj_id= $row_pro['project_id'];
-  $proj_title= $row_pro['project_name'];
-  $proj_desc= $row_pro['project_desc'];
-  $proj_doc= $row_pro['design_doc'];
-
-  $max_bid= $row_pro['max_bid'];
-  $proj_raw_materials= $row_pro['raw_materials'];
-  $proj_last_date= $row_pro['last_date'];
-
-
-  $i++;
-            
-
-?>
-
-
-
-
-    <tr>
-      <th scope="row"  style="font-weight: 500; text-align: justify; width: 500px;">
-      
-       <span style="font-size: 18px;"> <?php echo $proj_title;  ?> </span>
-        <br>
-        <span style="font-size: 14px; text-align: justify;"><?php echo $proj_desc ; ?> </span>
-      
-      </th>
-
-      <td style="text-align: center; width: 200px;"><a href="../../admin_area/design_doc/<?php echo $proj_doc;?>"><img src="../../images/downloads.png" width="60" height="60"></a></td>
-      <td style="text-align: center;"><?php echo $proj_last_date ; ?>
-</td>
-      
-      <td style="text-align: center;">₹ <?php echo $max_bid;  ?>
-        <br>
-   <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Make A Bid</button></a>
-      </td>
-</tr>
-
- 
- 
-<?php
-}
-
-?>
-
-
-  </tbody>
-</table>
-
-    
-      
-      <!-- <div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-list">
-
-           <div class="cbp-vm-options">
-           <a href="#" class="cbp-vm-icon cbp-vm-grid " data-view="cbp-vm-view-grid">Grid View</a> 
-            <a href="#" class="cbp-vm-icon cbp-vm-list  cbp-vm-selected" data-view="cbp-vm-view-list">List View</a>
-       </div>   
-
-         
-          <ul>
-
-            <li>
-
+<div style="text-align: center; ">
+<button type="submit" name="accept" style="font-size: 25px; padding: 10px 10px 10px 10px;" class="btn btn-success">Submit</button>
 
       
-                        
-  <h3 class="cbp-vm-title"><a href=""></a></h3>
+</div>
+
+</form>
 
 
-
-              <div class="cbp-vm-price" style="color:black;"> </div>
-              <div class="cbp-vm-details">
-              
-              </div>
-
-            <a class="cbp-vm-icon cbp-vm-add" href="all_products.php?rp_cart=<?php// echo $pro_id;?>">Cart</a> 
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Make Bid</button>
-            </li>
-          
-      
-          </ul>
-
-          <hr style="background-color: black;">
-
-
-
-
-    
-      </div>-->
-
-
-  
-
-    </div>
-
-
-
-
-
-
-
-
+</div>
        
 
-     
-
-      
 
 
- 
-        
 
-
-  <!-- Modal -->
-
-        
 
       </div>
     </div>
@@ -329,6 +270,50 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
   </html>
 <?php
 
+if (isset($_POST['accept'])) {
+  
+$proj_id_application = $proj_id;
+$name = $_POST['name_info'];
+$contact = $_POST['contact']; 
+$mailid = $_POST['mailid']; 
+$add1 = $_POST['add1'];
+$add2 = $_POST['add2'];
+$add3 = $_POST['add3'];
+$district = $_POST['district'];
+$pin = $_POST['pin'];
+
+
+$maker_info = "$add1, $add2, $add3, $district";
+
+
+
+
+$update_info = "UPDATE makerclan SET   name = '$name' , contact = '$contact' , address = '$maker_info'  where  email = '$c_email'";
+
+if (mysqli_query($con , $update_info)) {
+    echo "<script>alert('Your form has been updated')</script>";
+    echo "<script>window.open('index.php?clan_project','_self')</script>";
+} else {
+    echo "Error: " . $insert_info . "<br>" . mysqli_error($con);
+}
+
+
+
+
+
 
 }
+
+
+
+
+
+
+}
+
+
+
+
+
+
 ?>
