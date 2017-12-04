@@ -490,10 +490,10 @@ If you are an enthusiast.
                        <?php 
 
         $get_cats = "select * from categories";
-    $run_cats = mysql_query($get_cats, $con);
+    $run_cats = mysqli_query($con , $get_cats);
 
 
-    while ($row_cats = mysql_fetch_array($run_cats) ) 
+    while ($row_cats = mysqli_fetch_array($run_cats) ) 
     {
       $cat_id = $row_cats['cat_id'];
       $cat_title = $row_cats['cat_title'];
@@ -983,10 +983,10 @@ If you are an enthusiast.
                        <?php 
 
         $get_cats = "select * from categories";
-    $run_cats = mysql_query($get_cats, $con);
+    $run_cats = mysqli_query($con , $get_cats);
 
 
-    while ($row_cats = mysql_fetch_array($run_cats) ) 
+    while ($row_cats = mysqli_fetch_array($run_cats) ) 
     {
       $cat_id = $row_cats['cat_id'];
       $cat_title = $row_cats['cat_title'];
@@ -1449,7 +1449,7 @@ $from = "From: Rent@elecbits.in";
 
 $run_rent ="INSERT into rent (yourdetails, projdetails) values ('$yourdetails', '$projdetails')  ";
 
-$run_query_rent = mysql_query( $run_rent, $con);
+$run_query_rent = mysqli_query( $con , $run_rent);
 
 if (  ($run_query_rent)  && (mail("saurav.rav67@gmail.com", "Rent", $send, $from)) && (mail($email, "Successfully Registered ", "Your rent application has been successfully registered at Elecbits, Have a great shopping experience.  Meanwhile visit us at http://elecbits.in " , $from)) && (mail("elecbits16@gmail.com", "New Addition", $send, $from) ) ) {
 

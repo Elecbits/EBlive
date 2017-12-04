@@ -86,8 +86,10 @@ $comp_name=$_POST['comp_name'];
 $comp_price= $_POST['comp_price'];
 $comp_stock= $_POST['comp_stock'];
 
+$total = $comp_price*$comp_stock;
 
-$insert_comp= "INSERT INTO components (name,price,stock) VALUES ('$comp_name','$comp_price', '$comp_stock') ";
+
+$insert_comp= "INSERT INTO components (name,price,stock, total) VALUES ('$comp_name','$comp_price', '$comp_stock','$total') ";
 
 $run_comp = mysqli_query($con , $insert_comp);
 

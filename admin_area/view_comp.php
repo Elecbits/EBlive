@@ -56,6 +56,7 @@ include("include/db.php");
       <th>Name</th>
       <th>Price</th>
       <th>Stock</th>
+      <th>Total</th>
 
       <th>Edit</th>
       <th>Delete</th>
@@ -79,6 +80,8 @@ while ($row_comp=mysqli_fetch_array($run_comp)) {
   $comp_name= $row_comp['name'];
   $comp_price= $row_comp['price'];
   $comp_stock= $row_comp['stock'];
+  $total= $row_comp['total'];
+
 
   
 
@@ -91,6 +94,8 @@ while ($row_comp=mysqli_fetch_array($run_comp)) {
       <td> <?php echo $comp_name; ?></td>
       <td> <?php echo $comp_price; ?></td>
       <td> <?php echo $comp_stock; ?></td>
+      <td> <?php echo $total; ?></td>
+
 
       
       <td> <a href="index.php?edit_comp=<?php echo $comp_id ; ?>" style="color: black; "> Edit </a> </td> 

@@ -400,6 +400,12 @@ if (isset($_GET['edit_comp'])) {
      include("edit_comp.php");
    }
 
+if (isset($_GET['edit_c_report'])) {
+     
+
+     include("edit_c_report.php");
+   }
+
 
 if (isset($_GET['delete_comp'])) {
      
@@ -437,6 +443,14 @@ if (isset($_GET['accept_list'])) {
      include("accept_list.php");
    }
 
+
+
+
+if (isset($_GET['allot_order'])) {
+     
+
+     include("allot_order.php");
+   }
 
 
    ?>

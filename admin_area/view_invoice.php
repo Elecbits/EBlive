@@ -42,7 +42,19 @@ include("include/db.php");
 
 <h3 style=" font-family: 'Montserrat', sans-serif;  padding: 0px 0px 10px 0px; text-align: center; ">INVOICES</h3>
 
+<?php
 
+$get_total_revenue ="SELECT sum(total) as total_revenue FROM invoice ";
+
+$run_gtp =mysqli_query( $con , $get_total_revenue);
+
+$row_gtp=mysqli_fetch_array($run_gtp);
+
+$total_revenue = $row_gtp['total_revenue'];
+
+?>
+
+<h4 style=" font-family: 'Montserrat', sans-serif;  padding: 0px 0px 10px 0px; text-align: left; ">Total Profit : <?php echo round($total_revenue); ?></h3>
 
 
 

@@ -77,7 +77,7 @@ else{
       <li>
         <a href="my_bids.php" style="text-decoration: none; color: black;"><strong>My Bids</strong></a>
       
-      </li>
+      </li> 
           <li>
         <a href="settings.php" style="text-decoration: none; color: black;"><strong>Settings</strong></a>
    
@@ -195,6 +195,14 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
   $proj_doc= $row_pro['design_doc'];
 
   $max_bid= $row_pro['max_bid'];
+  $skills= $row_pro['skills'];
+
+
+$bid = explode("|", $max_bid);
+
+
+
+
   $proj_raw_materials= $row_pro['raw_materials'];
   $proj_last_date= $row_pro['last_date'];
 
@@ -212,6 +220,8 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
       
        <span style="font-size: 18px;"> <?php echo $proj_title;  ?> </span>
         <br>
+        <span style="font-size: 16px; font-weight: 900; text-align: justify;"><?php echo $skills ; ?> </span>
+        <br>
         <span style="font-size: 14px; text-align: justify;"><?php echo $proj_desc ; ?> </span>
       
       </th>
@@ -220,7 +230,7 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
       <td style="text-align: center;"><?php echo $proj_last_date ; ?>
 </td>
       
-      <td style="text-align: center;">₹ <?php echo $max_bid;  ?>
+      <td style="text-align: center;">₹ <?php echo $bid[1];  ?>
         <br>
    <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Make A Bid</button></a>
       </td>

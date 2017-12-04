@@ -193,6 +193,8 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
   $proj_id= $row_pro['project_id'];
   $bid = $row_pro['max_bid'];
   $exp_date = $row_pro['pick_up_date'];
+  $allot_status = $row_pro['allot_status'];
+
 
 
 
@@ -232,7 +234,24 @@ $row_pro_info = mysqli_fetch_array($run_proj_info);
       
       <td style="text-align: center;">₹ <?php echo $bid;  ?>
         <br>
-   <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Update your application</button></a>
+   <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Refill application</button></a>
+   <br>
+   <p  <?php if ($allot_status == 'Not Alloted') {
+    
+?>
+
+style="color: red; font-weight: 700;"
+<?php
+
+   }
+
+else {
+
+?>
+style="color: green; font-weight: 700;"
+
+<?php
+   }?> > <?php  echo $allot_status; ?> </p>
       </td>
 </tr>
 

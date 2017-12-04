@@ -122,6 +122,7 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
   $proj_id= $row_pro['project_id'];
   $proj_title= $row_pro['project_name'];
   $proj_desc= $row_pro['project_desc'];
+  $skills= $row_pro['skills'];
   $max_bid= $row_pro['max_bid'];
   $proj_raw_materials= $row_pro['raw_materials'];
   $proj_last_date= $row_pro['last_date'];
@@ -133,7 +134,7 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
 <tr>
       <td> <?php echo $proj_id; ?></td>
       <td> <?php echo $proj_title; ?></td>
-      <td> <?php echo $proj_desc; ?></td>
+      <td> <?php echo $skills; ?> | <br><?php echo $proj_desc; ?></td>
       <td> <?php echo $max_bid; ?></td>
       <td> <?php echo $proj_raw_materials; ?></td>
       <td> <?php echo $proj_last_date; ?></td>
@@ -199,6 +200,7 @@ require_once "Classes/PHPExcel.php";
  $max_bid =  $worksheet->getCell('D'.'2')->getValue();
   $raw_material = $worksheet->getCell('E'.'2')->getValue();
   $last_date = $worksheet->getCell('F'.'2')->getValue();
+  $skills = $worksheet->getCell('G'.'2')->getValue();
 
  $upload_date = date("Y/m/d");
 
@@ -213,7 +215,7 @@ $count_upsert_query = mysqli_num_rows($run_upsert_query);
 if ($count_upsert_query == 0) {
  
 //Insert here
- $insert_info = "INSERT INTO project_details (project_id, project_name, project_desc, max_bid, raw_materials, last_date, upload_date) values ('$project_id', '$project_name', '$project_desc', '$max_bid', '$raw_material', '$last_date' , '$upload_date')";
+ $insert_info = "INSERT INTO project_details (project_id, project_name, project_desc, max_bid, raw_materials, last_date, upload_date, skills) values ('$project_id', '$project_name', '$project_desc', '$max_bid', '$raw_material', '$last_date' , '$upload_date', '$skills')";
 
 
 
@@ -229,7 +231,7 @@ if (mysqli_query($con , $insert_info)) {
 else
 {
 
-$update_info = "UPDATE project_details SET project_name = '$project_name' , project_desc = '$project_desc' , max_bid = '$max_bid' , raw_materials = '$raw_material' , last_date = '$last_date' , upload_date = '$upload_date'  where project_id = '$project_id'";
+$update_info = "UPDATE project_details SET project_name = '$project_name' , project_desc = '$project_desc' , max_bid = '$max_bid' , raw_materials = '$raw_material' , last_date = '$last_date' , upload_date = '$upload_date' , skills = '$skills' where project_id = '$project_id'";
 
 if (mysqli_query($con , $update_info)) {
     echo "<script>alert('Product has been updated')</script>";

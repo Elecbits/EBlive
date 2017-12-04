@@ -32,6 +32,9 @@ $row_pro=mysqli_fetch_array($run_pro);
   $proj_doc= $row_pro['design_doc'];
 
   $max_bid= $row_pro['max_bid'];
+$bid = explode("|", $max_bid);
+
+
   $proj_raw_materials= $row_pro['raw_materials'];
   $proj_last_date= $row_pro['last_date'];            
 
@@ -127,7 +130,7 @@ $row_pro=mysqli_fetch_array($run_pro);
 
       global $con;
 
-
+$comp_req = '';
 
       $name_query="SELECT * FROM makerclan WHERE email='$c_email' or username = '$c_email'";
 
@@ -172,7 +175,9 @@ $row_pro=mysqli_fetch_array($run_pro);
 
       <div class="mui-container-fluid">
 
-<div class="col-lg-8">
+<div class="col-lg-12 row">
+
+  <div class="col-lg-8">
 
 <blockquote class="blockquote" style=" border-style: solid; border-radius: 10px; border-color: #f7f7f7 ; font-size: 20px;  padding: 10px 10px 10px 10px;" >
   <p class="mb-0" >Applying For - <?php echo $proj_title; ?></p>
@@ -187,12 +192,64 @@ $row_pro=mysqli_fetch_array($run_pro);
 
 <div style="border-style: solid; border-radius: 10px; border-color: #f7f7f7 ; padding: 20px 20px 20px 20px;">
 
+
+
 <form method="post" action="">
+
+  <div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="comp_req" id="exampleRadios1" value="our" checked>
+    Use our Components.
+  </label>
+</div>
+<div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="comp_req" id="exampleRadios2" value="your">
+   Use your own components.
+  </label>
+</div>
+ <button type="submit" name="comp" class="btn btn-primary" style="font-size: 15px; padding: 10px 10px 10px 10px;" >Submit</button>
+</form>
+
+
+</div>
+
+<hr>
+
+
+<?php
+
+
+if (isset($_POST['comp'])) {
+
+$comp_req = $_POST['comp_req'];
+
+
+
+if ($comp_req == 'our') {
+  $bid_amount = $bid[0];
+}
+
+else{
+  $bid_amount = $bid[1];
+}
+
+
+?>
+
+<div style="border-style: solid; border-radius: 10px; border-color: #f7f7f7 ; padding: 20px 20px 20px 20px;">
+
+
+
+<form method="post" action="">
+
+
 
 <div class="form-group row">
   <label for="example-text-input" class="col-2 col-form-label">Max Bid</label>
   <div class="col-10">
-    <input class="form-control"  min="1" max="<?php echo $max_bid; ?>"  type="number" name="bid" value="<?php echo $max_bid; ?>" id="example-text-input" required>
+    <input class="form-control"  min="1" max="<?php echo $bid_amount; ?>"  type="number" name="bid" value="<?php echo $bid_amount; ?>" id="example-text-input" required>
+    <input type="hidden" class="form-control"  name="compo" value="<?php echo $bid_amount; ?>" id="example-text-input" >
   </div>
 </div>
 <div class="form-group row">
@@ -221,71 +278,85 @@ $row_pro=mysqli_fetch_array($run_pro);
 <hr>
 <br>
 
+</div>
+
+<div class="col-lg-4">
+
 <div style="border-style: solid; border-radius: 10px; border-color: #f7f7f7 ; padding: 20px 20px 20px 20px;">
 
+ <p style="font-weight: 900;">Address</p>
+ <?php echo $customer_name ; ?><br>
+ <?php echo $m_contact ; ?> <br>
+ <?php  echo $c_email ; ?> <br>
+ <?php  echo $add_part[0] ; ?>
+ <?php  echo $add_part[1] ; ?><br>
+ <?php  echo $add_part[2] ; ?><br>
+ <?php  echo $add_part[3] ; ?> -
+ <?php  echo $m_pin ; ?> 
 
-<div class="form-group row">
-  <label for="example-url-input" class="col-2 col-form-label">Name</label>
-  <div class="col-10">
-    <input class="form-control" type="text"  name="name_info" value="<?php echo $customer_name ; ?>" id="example-url-input" required>
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-tel-input" class="col-2 col-form-label">Contact</label>
-  <div class="col-10">
-    <input class="form-control" type="tel" name="contact" value="<?php echo $m_contact ; ?>" id="example-tel-input" required> 
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-password-input" class="col-2 col-form-label">Email</label>
-  <div class="col-10">
-    <input class="form-control" type="email"  name="mailid" value="<?php  echo $c_email ; ?>" id="example-password-input" disabled>
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-url-input" class="col-2 col-form-label">Flat/House No</label>
-  <div class="col-10">
-    <input class="form-control" type="text"  name="add1" value="<?php  echo $add_part[0] ; ?>" id="example-url-input" required>
-  </div>
-</div>
-<div class="form-group row">
-  <label for="example-url-input" class="col-2 col-form-label">Street Name</label>
-  <div class="col-10">
-    <input class="form-control" type="text"  name="add2" value="<?php  echo $add_part[1] ; ?>" id="example-url-input" required>
-  </div>
-</div>
+ <br>
+ <br>
+ 
 
-<div class="form-group row">
-  <label for="example-url-input" class="col-2 col-form-label">Area/District</label>
-  <div class="col-10">
-    <input class="form-control" type="text"  name="add3" value="<?php  echo $add_part[2] ; ?>" id="example-url-input" required>
-  </div>
-</div>
+ <a href='settings.php'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Update Address</button></a>
 
 
 <div class="form-group row">
+   <div class="col-10">
+    <input class="form-control" type="hidden"  name="name_info" value="<?php echo $customer_name ; ?>" id="example-url-input" required>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-10">
+    <input class="form-control" type="hidden" name="contact" value="<?php echo $m_contact ; ?>" id="example-tel-input" required> 
+  </div>
+</div>
+<div class="form-group row">
+  <div class="col-10">
+    <input class="form-control" type="hidden"  name="mailid" value="<?php  echo $c_email ; ?>" id="example-password-input" disabled>
+  </div>
+</div>
+<div class="form-group row">
+ 
+  <div class="col-10">
+    <input class="form-control" type="hidden"  name="add1" value="<?php  echo $add_part[0] ; ?>" id="example-url-input" required>
+  </div>
+</div>
+<div class="form-group row">
+ 
+  <div class="col-10">
+    <input class="form-control" type="hidden"  name="add2" value="<?php  echo $add_part[1] ; ?>" id="example-url-input" required>
+  </div>
+</div>
 
-  <label for="example-url-input" class="col-2 col-form-label">Your location</label>
+<div class="form-group row">
+  
+  <div class="col-10">
+    <input class="form-control" type="hidden"  name="add3" value="<?php  echo $add_part[2] ; ?>" id="example-url-input" required>
+  </div>
+</div>
+
+
+<div class="form-group row">
+
+  
 <div style="padding-left: 17px;">
-     <select  name="district" required >
+     <select  name="district" hidden >
                       <option value="delhi" selected="selected"><?php  echo $add_part[3] ; ?></option>
-                      <option value="noida">Noida</option>
-                      <option value="Gurgaon">Gurgaon</option>
-                      <option value="Ghaziabad">Ghaziabad</option>
-                      <option value="NCR">Outside NCR</option>
-                    </select>
+                        </select>
 </div>
 </div>
 
 
 <div class="form-group row">
-  <label for="example-url-input" class="col-2 col-form-label">Pin Code</label>
-  <div class="col-10">
-    <input class="form-control" type="number"  name="pin" value="<?php  echo $m_pin ; ?>" id="example-url-input" required>
-  </div>
+ 
+    <input class="form-control" type="hidden"  name="pin" value="<?php  echo $m_pin ; ?>" id="example-url-input" required>
+
 </div>
 
 
+
+</div>
 
 </div>
 
@@ -296,15 +367,25 @@ $row_pro=mysqli_fetch_array($run_pro);
 <button type="submit" name="accept" style="font-size: 25px; padding: 10px 10px 10px 10px;" class="btn btn-success">Submit</button>
 
       
-</div>
+
+
+
 
 </form>
 
 
+<?php
+
+}
+
+
+?>
+
+
+</div>
+
 </div>
        
-
-
 
 
 
@@ -334,11 +415,12 @@ $row_pro=mysqli_fetch_array($run_pro);
 
 if (isset($_POST['accept'])) {
   
+$bid_a = $_POST['compo'] ; 
 $proj_id_application = $proj_id;
 $bid = $_POST['bid'];
 $exp_date = $_POST['exp_date'];
 $raw_mat = $_POST['raw_mat']; 
-$add_inst = $_POST['add_inst']; 
+$add_tt = $_POST['add_inst']; 
 $name = $_POST['name_info'];
 $contact = $_POST['contact']; 
 $mailid = $_POST['mailid']; 
@@ -347,6 +429,10 @@ $add2 = $_POST['add2'];
 $add3 = $_POST['add3'];
 $district = $_POST['district'];
 $pin = $_POST['pin'];
+
+$add_inst = "$bid_a , $add_tt";
+
+
 
 
 $maker_info = "$add1, $add2, $add3, $district, $pin";

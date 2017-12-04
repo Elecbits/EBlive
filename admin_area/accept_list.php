@@ -57,6 +57,7 @@ include("include/db.php");
       <th>Raw_material</th>
       <th>Additional Info</th>
       <th>Maker Info</th>
+      <th>Allot Info</th>
       <th>Delete</th>
 
 		
@@ -78,6 +79,8 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
   $product_add_info= $row_pro['add_info'];
   $maker= $row_pro['maker_info'];
   $user = $row_pro['user'];
+  $allot_status = $row_pro['allot_status'];
+
 $maker_info = "$user, $maker";
 
   $i++;
@@ -91,6 +94,15 @@ $maker_info = "$user, $maker";
       <td> <?php echo $product_raw; ?></td>
       <td> <?php echo $product_add_info; ?></td>
       <td> <?php echo $maker_info; ?></td>
+         <td>  <?php echo $allot_status; ?>
+          <button type = "submit" name="status_change" ><a href = "index.php?allot_order=<?php echo $product_id; ?>&&cid=<?php echo $user; ?>&&ao=<?php echo $allot_status; ?>" " style="text-decoration:none; color:black;">Change status</a></button>
+
+
+        </td>
+      
+
+
+
      <td> <a href="delete_apply.php?delete_pro=<?php echo $product_id ?>" style="color: black; "> Delete </a> </td>      
 
     

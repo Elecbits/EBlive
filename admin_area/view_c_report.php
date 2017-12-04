@@ -44,6 +44,20 @@ include("include/db.php");
 <h3 style=" font-family: 'Montserrat', sans-serif;  padding: 0px 0px 10px 0px; text-align: center; ">Reports</h3>
 
 
+<?php
+
+$get_total_profit ="SELECT sum(profit) as total_profit FROM c_report order by order_id ";
+
+$run_gtp =mysqli_query( $con , $get_total_profit);
+
+$row_gtp=mysqli_fetch_array($run_gtp);
+
+$total_profit = $row_gtp['total_profit'];
+
+?>
+
+<h4 style=" font-family: 'Montserrat', sans-serif;  padding: 0px 0px 10px 0px; text-align: left; ">Total Profit : <?php echo $total_profit; ?></h3>
+
 
 
 
@@ -53,11 +67,10 @@ include("include/db.php");
 
     <tr>
 	    <th>Project</th>
-      <th>Hardware Cost</th>
-      <th>Construction time</th>
-      <th>Extra Cost</th>
-      <th>Time to deliver</th>
+      <th>Hardware Cost</th>   
+      <th>Extra Cost</th>  
       <th>Profit</th>
+      <th>Edit</th>
       <th>Delete</th>
 
 
@@ -91,12 +104,12 @@ $profit = $row_cat['profit'];
 <tr>
       <td> <?php echo $order_id; ?></td>
       <td> <?php echo $hw_cost; ?></td>
-      <td> <?php echo $t_construct; ?></td>
+
       <td> <?php echo $extra_cost; ?></td>
-      <td> <?php echo $t_extra; ?></td>
+      
       <td> <?php echo $profit; ?></td>
       
-     
+        <td> <a href="index.php?edit_c_report=<?php echo $order_id ; ?>" style="color: black; "> Edit </a> </td>      
        <td> <a href="delete_c_report.php?delete_c_report=<?php echo $order_id ?>" style="color: black; "> Delete </a> </td>      
 
     
@@ -105,7 +118,7 @@ $profit = $row_cat['profit'];
 
   <?php }  ?>
 
-
+ 
 
   </table>
 </div>

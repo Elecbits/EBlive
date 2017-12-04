@@ -103,16 +103,17 @@ $row_get_comp = mysqli_fetch_array($run_get_comp);
 <?php
 
 
-
 if (isset($_POST['add_comp'])) {
   
 $comp_name_upd  = $_POST['comp_name_upd'];
 $comp_price_upd = $_POST['comp_price_upd'];
 $comp_stock_upd = $_POST['comp_stock_upd'];
 
+$total = $comp_price_upd*$comp_stock_upd;
 
 
-$update_cat= "UPDATE components SET name= '$comp_name_upd' ,  price =  '$comp_price_upd' , stock = '$comp_stock_upd' WHERE comp_id = '$comp_id' ";
+
+$update_cat= "UPDATE components SET name= '$comp_name_upd' , total='$total',  price =  '$comp_price_upd' , stock = '$comp_stock_upd' WHERE comp_id = '$comp_id' ";
 
 $run_cat = mysqli_query($con , $update_cat);
 
