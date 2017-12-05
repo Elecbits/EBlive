@@ -232,11 +232,9 @@ $row_pro_info = mysqli_fetch_array($run_proj_info);
       <td style="text-align: center;"><?php echo $exp_date ; ?>
 </td>
       
-      <td style="text-align: center;">₹ <?php echo $bid;  ?>
-        <br>
-   <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Refill application</button></a>
-   <br>
-   <p  <?php if ($allot_status == 'Not Alloted') {
+      <td style="text-align: center; font-weight: 900;">₹ <?php echo $bid;  ?> 
+
+   <span  <?php if ($allot_status == 'Not Alloted') {
     
 ?>
 
@@ -251,7 +249,63 @@ else {
 style="color: green; font-weight: 700;"
 
 <?php
-   }?> > <?php  echo $allot_status; ?> </p>
+   }?> > [ <?php  echo $allot_status; ?> ] </span>
+
+   <br>
+  
+<?php 
+
+if ($allot_status == 'Not Alloted') {
+?>
+ <div style="padding-bottom: 5px;">
+  <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Refill application</button></a>
+</div>
+
+ <div style="padding-bottom: 5px;">
+<a href='delete_application.php?project=<?php echo $proj_id; ?>,<?php echo $c_email; ?>'><button type="button"   class="btn btn-danger"  style="font-size: 16px;">Delete application</button></a>
+</div>
+
+<?php 
+}
+?>
+
+
+<?php 
+
+if ($allot_status == 'Alloted') {
+?>
+
+
+ <div style="padding-bottom: 5px;">
+<a href='delete_application.php?project=<?php echo $proj_id; ?>,<?php echo $c_email; ?>'><button type="button"   class="btn btn-danger"  style="font-size: 16px;">Delete application</button></a>
+</div>
+
+<?php 
+}
+?>
+
+
+<?php 
+
+if ( ($allot_status == 'Shipping') || ($allot_status == 'Testing') || ($allot_status == 'Delivered') || ($allot_status == 'Paid') ) {
+
+}
+?>
+
+
+
+
+
+
+
+  
+</div>
+
+
+     <a href='report.php?project=<?php echo $proj_id; ?>' target="_blank"><button type="button"   class="btn btn-success"  style="font-size: 16px;">Print your application</button></a>
+
+ 
+
       </td>
 </tr>
 

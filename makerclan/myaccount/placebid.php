@@ -68,6 +68,7 @@ $bid = explode("|", $max_bid);
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
 
         
@@ -190,52 +191,12 @@ $comp_req = '';
 
 
 
-<div style="border-style: solid; border-radius: 10px; border-color: #f7f7f7 ; padding: 20px 20px 20px 20px;">
 
-
-
-<form method="post" action="">
-
-  <div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="comp_req" id="exampleRadios1" value="our" checked>
-    Use our Components.
-  </label>
-</div>
-<div class="form-check">
-  <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="comp_req" id="exampleRadios2" value="your">
-   Use your own components.
-  </label>
-</div>
- <button type="submit" name="comp" class="btn btn-primary" style="font-size: 15px; padding: 10px 10px 10px 10px;" >Submit</button>
-</form>
-
-
-</div>
 
 <hr>
 
 
-<?php
 
-
-if (isset($_POST['comp'])) {
-
-$comp_req = $_POST['comp_req'];
-
-
-
-if ($comp_req == 'our') {
-  $bid_amount = $bid[0];
-}
-
-else{
-  $bid_amount = $bid[1];
-}
-
-
-?>
 
 <div style="border-style: solid; border-radius: 10px; border-color: #f7f7f7 ; padding: 20px 20px 20px 20px;">
 
@@ -248,8 +209,22 @@ else{
 <div class="form-group row">
   <label for="example-text-input" class="col-2 col-form-label">Max Bid</label>
   <div class="col-10">
-    <input class="form-control"  min="1" max="<?php echo $bid_amount; ?>"  type="number" name="bid" value="<?php echo $bid_amount; ?>" id="example-text-input" required>
-    <input type="hidden" class="form-control"  name="compo" value="<?php echo $bid_amount; ?>" id="example-text-input" >
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<input type="radio" ng-model="components" name="components" value="Use our components">Our Components<br/>
+<input type="radio" ng-model="components" name="components" value="Use your components">Your Components<br/>
+
+   <input class="form-control"  min="1" max="{{components=='Use our components'?<?php echo $bid[0]; ?>:<?php echo $bid[1]; ?>}}"  type="number" name="bid" value="{{components=='Use our components'?<?php echo $bid[0]; ?>:<?php echo $bid[1]; ?>}}" id="example-text-input" required>
+    <input type="hidden" class="form-control"  name="compo" value="{{components=='Use our components'?<?php echo $bid[0]; ?>:<?php echo $bid[1]; ?>}}" id="example-text-input" >
+
+
+
+{{components}}
+</div>
+
+
+ 
   </div>
 </div>
 <div class="form-group row">
@@ -374,12 +349,6 @@ else{
 </form>
 
 
-<?php
-
-}
-
-
-?>
 
 
 </div>
@@ -409,6 +378,17 @@ else{
         Made with ♥ by <a href="https://www.elecbits.in">Elecbits</a>
       </div>
     </footer>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+});
+</script>
+
+
+
+
+
   </body>
   </html>
 <?php
