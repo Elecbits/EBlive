@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<input type="radio" ng-model="components" name="components" value="our">Our Components<br/>
+<input type="radio" ng-model="components" name="components" value="your">Your Components<br/>
+<input  type="number" value="{{components=='our'?1000:2000}}">
+{{components}}
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+});
+</script>
+
+</body>
+</html>

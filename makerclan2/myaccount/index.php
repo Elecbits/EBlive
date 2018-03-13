@@ -163,7 +163,7 @@ else{
       <th style="text-align: center;">Project</th>
       <th style="text-align: center;">Design</th>
       <th style="text-align: center;">Last Date</th>
-      <th style="text-align: center;">Max Bid</th>
+      <th style="text-align: center;">Apply</th>
       
     </tr>
   </thead>
@@ -237,7 +237,7 @@ $bid = explode("|", $max_bid);
       <td style="text-align: center;"><?php echo $proj_last_date ; ?>
 </td>
       
-      <td style="text-align: center;">₹ <?php echo $bid[1];  ?>
+      <td style="text-align: center;"> <?php// echo $bid[1];  ?>
         <br>
 
 <?php

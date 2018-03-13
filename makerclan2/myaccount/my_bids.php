@@ -40,7 +40,7 @@ else{
     <script src="styles/alp/js/modernizr.custom.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Makerclan - Dashboard</title>
+  <title>Makerclan - My Bids</title>
   <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
@@ -77,7 +77,7 @@ else{
       <li>
         <a href="my_bids.php" style="text-decoration: none; color: black;"><strong>My Bids</strong></a>
       
-      </li> 
+      </li>
           <li>
         <a href="settings.php" style="text-decoration: none; color: black;"><strong>Settings</strong></a>
    
@@ -163,7 +163,8 @@ else{
       <th style="text-align: center;">Project</th>
       <th style="text-align: center;">Design</th>
       <th style="text-align: center;">Last Date</th>
-      <th style="text-align: center;">Max Bid</th>
+      <th style="text-align: center;">Your Bid</th>
+
       
     </tr>
   </thead>
@@ -171,7 +172,7 @@ else{
 
  <?php
    
-  $get_pro="SELECT * FROM project_details where project_id NOT IN (SELECT project_id FROM applied_form where user = '$c_email' )";
+  $get_pro="SELECT * FROM applied_form where user = '$c_email'";
 
 $run_pro =mysqli_query($con , $get_pro);
 
@@ -179,7 +180,7 @@ $check_num = mysqli_num_rows($run_pro);
 
 if ($check_num == 0) {
 
-  echo "You have applied to all the projects. Please refer to <a href='my_bids.php'>MY BIDS</a> to view details of your bidding.<br><br> ";
+  echo "You have not applied to any of the projects. Please refer to <a href='index.php'>TRENDING BIDS</a> to view details of your bidding.<br><br>";
   
 }
 
@@ -190,24 +191,24 @@ while ($row_pro=mysqli_fetch_array($run_pro)) {
   
 
   $proj_id= $row_pro['project_id'];
-  $proj_title= $row_pro['project_name'];
-  $proj_desc= $row_pro['project_desc'];
-  $proj_doc= $row_pro['design_doc'];
-
-  $max_bid= $row_pro['max_bid'];
-  $skills= $row_pro['skills'];
-  $flag = $row_pro['flag'];
+  $bid = $row_pro['max_bid'];
+  $exp_date = $row_pro['pick_up_date'];
+  $allot_status = $row_pro['allot_status'];
 
 
 
 
-$bid = explode("|", $max_bid);
+$proj_info = "SELECT * FROM project_details where project_id = '$proj_id'";
 
+$run_proj_info =mysqli_query($con , $proj_info);
 
+$row_pro_info = mysqli_fetch_array($run_proj_info);
 
+  $proj_title= $row_pro_info['project_name'];
+  $proj_desc= $row_pro_info['project_desc'];
+  $proj_doc= $row_pro_info['design_doc'];
 
-  $proj_raw_materials= $row_pro['raw_materials'];
-  $proj_last_date= $row_pro['last_date'];
+ 
 
 
   $i++;
@@ -223,67 +224,110 @@ $bid = explode("|", $max_bid);
       
        <span style="font-size: 18px;"> <?php echo $proj_title;  ?> </span>
         <br>
-        <span style="font-size: 16px; font-weight: 900; text-align: justify;"><?php echo $skills ; ?> </span>
-        <br>
         <span style="font-size: 14px; text-align: justify;"><?php echo $proj_desc ; ?> </span>
       
       </th>
 
       <td style="text-align: center; width: 200px;"><a href="../../admin_area/design_doc/<?php echo $proj_doc;?>"><img src="../../images/downloads.png" width="60" height="60"></a></td>
-
-
-
-      
-      <td style="text-align: center;"><?php echo $proj_last_date ; ?>
+      <td style="text-align: center;"><?php echo $exp_date ; ?>
 </td>
       
-      <td style="text-align: center;">₹ <?php echo $bid[1];  ?>
-        <br>
+      <td style="text-align: center; font-weight: 900;">₹ <?php echo $bid;  ?> 
 
+   <span  <?php if ($allot_status == 'Not Alloted') {
+    
+?>
+
+style="color: red; font-weight: 700;"
 <?php
 
-if ($flag == 0) {
+   }
+
+else {
+
+?>
+style="color: green; font-weight: 700;"
+
+<?php
+   }?> > [ <?php  echo $allot_status; ?> ] </span>
+
+   <br>
   
+<?php 
 
+if ($allot_status == 'Not Alloted') {
 ?>
 
 
-   <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-danger"  style="font-size: 16px;" disabled>Alloted</button></a>
-     
+ <div style="padding-bottom: 5px;">
+  <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Refill application</button></a>
+</div>
 
-<?php
+ <div style="padding-bottom: 5px;">
+<a href='delete_application.php?project=<?php echo $proj_id; ?>,<?php echo $c_email; ?>'><button type="button"   class="btn btn-danger"  style="font-size: 16px;">Delete application</button></a>
+</div>
 
+<?php 
 }
-
-if ($flag == 1) {
-
 ?>
-
-
-<a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;" >Make A Bid</button></a>
-
-
-<?php
-
-}
-
-if ($flag == 2) {
-
-
-?>
-
-
-   <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-success"  style="font-size: 16px;" disabled>Completed</button></a>
-
 
 
 <?php 
 
-}
+if ($allot_status == 'Alloted') {
 ?>
 
- </td>
 
+<div style="padding-bottom: 5px;">
+<a href='cs.php?allot_order=<?php echo $proj_id; ?>&&cid=<?php echo $c_email; ?>&&ao=<?php echo $allot_status; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Change Status</button></a>
+</div>
+
+
+ <div style="padding-bottom: 5px;">
+<a href='delete_application.php?project=<?php echo $proj_id; ?>,<?php echo $c_email; ?>'><button type="button"   class="btn btn-danger"  style="font-size: 16px;">Delete application</button></a>
+</div>
+
+<?php 
+}
+if (($allot_status  == 'Development')||($allot_status  == 'Testing') ||($allot_status  == 'Presentation')) {
+  
+
+
+?>
+
+
+
+
+<div style="padding-bottom: 5px;">
+<a href='cs.php?allot_order=<?php echo $proj_id; ?>&&cid=<?php echo $c_email; ?>&&ao=<?php echo $allot_status; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;">Change Status</button></a>
+</div>
+
+<?php
+
+}
+
+if ($allot_status  == 'Completed') {
+  
+}
+
+
+?>
+
+
+
+
+
+
+
+  
+</div>
+
+
+     <a href='report.php?project=<?php echo $proj_id; ?>' target="_blank"><button type="button"   class="btn btn-success"  style="font-size: 16px;">Print your application</button></a>
+
+ 
+
+      </td>
 </tr>
 
  
@@ -351,6 +395,7 @@ if ($flag == 2) {
 
 
        
+<!-- Modal -->
 
      
 

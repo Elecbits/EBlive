@@ -121,6 +121,15 @@ include("functions/functions.php");
           <textarea ng-model="user.biography"  name="c_queries" md-maxlength="300" rows="5" md-select-on-focus></textarea>
         </md-input-container>
 
+ <md-input-container class="md-block">
+ <div layout-gt-sm="row">
+<div class="g-recaptcha" data-sitekey="6LfN8TEUAAAAALT8vRgcDDwRDg9vxJztgu8dCaDa"></div>
+                 
+        </div>
+      </md-input-container>
+
+
+
         <button style="margin-left:40%"  type="submit" name="update" class="btn btn-primary">SUBMIT</button>
       </div>
 
@@ -170,6 +179,40 @@ include("public/footer.php");
 
 if (isset($_POST['update'])) {
 
+
+    function post_captcha($user_response) {
+        $fields_string = '';
+        $fields = array(
+            'secret' => '6LfN8TEUAAAAAC6w7WHOMtAzUjgOHczP4Iv86zit',
+            'response' => $user_response
+        );
+        foreach($fields as $key=>$value)
+        $fields_string .= $key . '=' . $value . '&';
+        $fields_string = rtrim($fields_string, '&');
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
+        curl_setopt($ch, CURLOPT_POST, count($fields));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, True);
+
+        $result = curl_exec($ch);
+        curl_close($ch);
+
+        return json_decode($result, true);
+    }
+
+
+        // Call the function post_captcha
+    $res = post_captcha($_POST['g-recaptcha-response']);
+
+    if (!$res['success']) {
+        // What happens when the CAPTCHA wasn't checked
+       echo "<script>alert('Please go back and make sure you check the security CAPTCHA box.')</script>"; 
+  
+    } else {
+
+
   $fname = $_POST['c_name'];
   $email = $_POST['c_email'];
   $colg = $_POST['college'];
@@ -193,6 +236,9 @@ if( mail("saurav.rav67@gmail.com", "New Addition", $msg, $from) && mail("elecbit
 
 }
   
+}
+
+
 }
 
 ?>

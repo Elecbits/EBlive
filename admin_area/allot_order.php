@@ -73,8 +73,12 @@ else{
        <option>Alloted</option>
        <option>Not Alloted</option>
        <option>Testing</option>
+       <option>Presentation</option>
+
        <option>Shipping</option>
        <option>Delivered</option>
+       <option>Completed</option>
+
        <option>Paid</option>
      </select> </td>
 
@@ -89,6 +93,26 @@ else{
    if (isset($_POST['submit'])) {
 
     $track_c = $_POST['track_c'];
+
+    
+    if ($track_c == 'Completed') {
+      
+
+      $upd_status ="UPDATE project_details SET flag=2 WHERE user = '$customer_id' && project_id='$product_id'";
+
+      $run_upd_status = mysqli_query( $con , $upd_status );
+
+       if ($run_upd_status) {
+       
+       echo "<script>alert('Order has been updated')</script>";
+        echo "<script>window.open('index.php?accept_list','_self')</script>";
+     }
+
+
+    }
+
+
+
      
 
      $track_status ="UPDATE applied_form SET allot_status='$track_c' WHERE user = '$customer_id' && project_id='$product_id'";

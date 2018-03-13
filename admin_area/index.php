@@ -165,7 +165,15 @@ Calculator
 <p>
 Maker Clan
 </p>
+
+<div style=" text-align: center;  background-color: #99ff99; padding: 10px 0px 10px 0px ; font-size: 16px;"><a href="index.php?add_makers" style=" color: black; ">Add Makers</a></div>
+
+
+
 <div style=" text-align: center;  background-color: #99ff99; padding: 10px 0px 10px 0px ; font-size: 16px;"><a href="index.php?clan_project" style=" color: black; ">Project list</a></div>
+
+
+
 <div style=" text-align: center;  background-color: #99ff99; padding: 10px 0px 10px 0px ; font-size: 16px;"><a href="index.php?insert_proj_doc" style=" color: black; ">Upload Doc File</a></div>
 <div style=" text-align: center;  background-color: #99ff99; padding: 10px 0px 10px 0px ; font-size: 16px;"><a href="index.php?accept_list" style=" color: black; ">Acceptance list</a></div>
 
@@ -450,6 +458,17 @@ if (isset($_GET['allot_order'])) {
      
 
      include("allot_order.php");
+   }
+
+
+
+
+
+
+if (isset($_GET['add_makers'])) {
+     
+
+     include("add_makers.php");
    }
 
 

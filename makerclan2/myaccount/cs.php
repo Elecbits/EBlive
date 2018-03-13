@@ -13,6 +13,42 @@ echo "<script>window.open('../index.php','_self')</script>";
 else{
 
 
+if (isset($_GET['allot_order'])&& isset($_GET['cid']) &&isset($_GET['ao'])) {
+   
+   $product_id= $_GET['allot_order'];
+
+   $customer_id= $_GET['cid'];
+
+   $allot_order = $_GET['ao'];
+
+
+ $get_pro="SELECT * FROM project_details where project_id = '$product_id'";
+
+$run_pro =mysqli_query($con , $get_pro);
+
+$row_pro=mysqli_fetch_array($run_pro);
+
+  $proj_id= $row_pro['project_id'];
+  $proj_title= $row_pro['project_name'];
+  $proj_desc= $row_pro['project_desc'];
+  $proj_doc= $row_pro['design_doc'];
+
+  $max_bid= $row_pro['max_bid'];
+$bid = explode("|", $max_bid);
+
+
+  $proj_raw_materials= $row_pro['raw_materials'];
+  $proj_last_date= $row_pro['last_date'];      
+
+
+
+ $get_app="SELECT * FROM applied_form where project_id = '$product_id' AND user='$customer_id' ";
+
+$run_app =mysqli_query($con , $get_app);
+
+$row_app=mysqli_fetch_array($run_app);
+
+  $exp_date1= $row_app['pick_up_date'];
 
 
 
@@ -28,9 +64,19 @@ else{
 
 
 
+
+
+
+
+
+}
+
+
+ 
 
 
 ?>
+
 
 
 <html>
@@ -55,11 +101,32 @@ else{
       rel="stylesheet">
 
 
+  <script>
+    function yesnoCheck(that) {
+        if (that.value == "Completed") {
+            alert("You won't be able to change the status");
+            document.getElementById("ifYes").style.display = "none";
+        } else {
+            document.getElementById("ifYes").style.display = "block";
+        }
+    }
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+
         
   <style>
     .elec-logo{
       max-width: 154px;
     }
+
+   .form-control{
+    font-size: 15px;
+   }
+
+
   </style>
 </head>
 <body style="font-size: 16px;">
@@ -68,8 +135,8 @@ else{
       <!-- <span class="mui--text-title">Brand.io</span> -->
       <a href="../index.php"><img class="elec-logo" src="logo.png"></a>
     </div>
-    <div class="mui-divider"></div>
-      <ul >
+    <div class="mui-divider" ></div>
+    <ul >
       <li>
       <a href="index.php" style="text-decoration: none; color: black;"><strong>Trending Bids</strong></a>
      
@@ -77,7 +144,7 @@ else{
       <li>
         <a href="my_bids.php" style="text-decoration: none; color: black;"><strong>My Bids</strong></a>
       
-      </li> 
+      </li>
           <li>
         <a href="settings.php" style="text-decoration: none; color: black;"><strong>Settings</strong></a>
    
@@ -109,7 +176,7 @@ else{
 
       global $con;
 
-
+$comp_req = '';
 
       $name_query="SELECT * FROM makerclan WHERE email='$c_email' or username = '$c_email'";
 
@@ -118,6 +185,11 @@ else{
       while ($row_name_pro = mysqli_fetch_array($run_name_query)) 
     {
         $customer_name = $row_name_pro['name'];
+        $m_contact = $row_name_pro['contact'];
+        $m_pin = $row_name_pro['pincode'];
+        $m_address = $row_name_pro['address'];
+
+        $add_part = explode(",", $m_address);  
      
        echo $customer_name;  }
 
@@ -148,201 +220,90 @@ else{
 
 
       <div class="mui-container-fluid">
-       
-<div  class="col-lg-12 ">
+
+<div class="col-lg-12 row">
+
+  <div class="col-lg-8">
+
+<blockquote class="blockquote" style=" border-style: solid; border-radius: 10px; border-color: #f7f7f7 ; font-size: 20px;  padding: 10px 10px 10px 10px;" >
+  <p class="mb-0" >Changing Status For - <?php echo $proj_title; ?></p>
+</blockquote>
 
 
 <br>
 
 
-<table class="table">
-  <thead class="thead-inverse">
-  
-  
-    <tr>
-      <th style="text-align: center;">Project</th>
-      <th style="text-align: center;">Design</th>
-      <th style="text-align: center;">Last Date</th>
-      <th style="text-align: center;">Max Bid</th>
-      
-    </tr>
-  </thead>
-  <tbody>
 
- <?php
+
+
+
+
+<hr>
+
+
+
+
+<div style="border-style: solid; border-radius: 10px; border-color: #f7f7f7 ; padding: 20px 20px 20px 20px;">
+
+
+
+<form method="post" action="">
+
+
+<div class="form-group row">
+  <label for="example-datetime-local-input" class="col-2 col-form-label">Expected Date</label>
+  <div class="col-10">
+    <input class="form-control" type="date" name="exp_date" value="<?php  echo $exp_date1 ; ?>" max='<?php  echo $proj_last_date ; ?>' id="example-datetime-local-input" required>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-email-input" class="col-2 col-form-label">Phase</label>
+
    
-  $get_pro="SELECT * FROM project_details where project_id NOT IN (SELECT project_id FROM applied_form where user = '$c_email' )";
-
-$run_pro =mysqli_query($con , $get_pro);
-
-$check_num = mysqli_num_rows($run_pro);
-
-if ($check_num == 0) {
-
-  echo "You have applied to all the projects. Please refer to <a href='my_bids.php'>MY BIDS</a> to view details of your bidding.<br><br> ";
-  
-}
-
-else 
-
-$i=0;
-while ($row_pro=mysqli_fetch_array($run_pro)) {
-  
-
-  $proj_id= $row_pro['project_id'];
-  $proj_title= $row_pro['project_name'];
-  $proj_desc= $row_pro['project_desc'];
-  $proj_doc= $row_pro['design_doc'];
-
-  $max_bid= $row_pro['max_bid'];
-  $skills= $row_pro['skills'];
-  $flag = $row_pro['flag'];
-
-
-
-
-$bid = explode("|", $max_bid);
-
-
-
-
-  $proj_raw_materials= $row_pro['raw_materials'];
-  $proj_last_date= $row_pro['last_date'];
-
-
-  $i++;
-            
-
-?>
-
-
-
-
-    <tr>
-      <th scope="row"  style="font-weight: 500; text-align: justify; width: 500px;">
-      
-       <span style="font-size: 18px;"> <?php echo $proj_title;  ?> </span>
-        <br>
-        <span style="font-size: 16px; font-weight: 900; text-align: justify;"><?php echo $skills ; ?> </span>
-        <br>
-        <span style="font-size: 14px; text-align: justify;"><?php echo $proj_desc ; ?> </span>
-      
-      </th>
-
-      <td style="text-align: center; width: 200px;"><a href="../../admin_area/design_doc/<?php echo $proj_doc;?>"><img src="../../images/downloads.png" width="60" height="60"></a></td>
-
-
-
-      
-      <td style="text-align: center;"><?php echo $proj_last_date ; ?>
-</td>
-      
-      <td style="text-align: center;">₹ <?php echo $bid[1];  ?>
-        <br>
-
-<?php
-
-if ($flag == 0) {
-  
-
-?>
-
-
-   <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-danger"  style="font-size: 16px;" disabled>Alloted</button></a>
-     
-
-<?php
-
-}
-
-if ($flag == 1) {
-
-?>
-
-
-<a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-primary"  style="font-size: 16px;" >Make A Bid</button></a>
-
-
-<?php
-
-}
-
-if ($flag == 2) {
-
-
-?>
-
-
-   <a href='placebid.php?project=<?php echo $proj_id; ?>'><button type="button"   class="btn btn-success"  style="font-size: 16px;" disabled>Completed</button></a>
-
-
-
-<?php 
-
-}
-?>
-
- </td>
-
-</tr>
-
- 
- 
-<?php
-}
-
-?>
-
-
-  </tbody>
-</table>
 
     
-      
-      <!-- <div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-list">
 
-           <div class="cbp-vm-options">
-           <a href="#" class="cbp-vm-icon cbp-vm-grid " data-view="cbp-vm-view-grid">Grid View</a> 
-            <a href="#" class="cbp-vm-icon cbp-vm-list  cbp-vm-selected" data-view="cbp-vm-view-list">List View</a>
-       </div>   
+     <select onchange="yesnoCheck(this);" name="track_c" >
+      <option value="<?php echo $allot_order;  ?>"><?php echo $allot_order;  ?></option>
+    <option value="Development">Development</option>
+    <option value="Testing">Testing</option>
+    <option value="Presentation">Presentation</option>
 
-         
-          <ul>
-
-            <li>
-
-
-      
-                        
-  <h3 class="cbp-vm-title"><a href=""></a></h3>
-
-
-
-              <div class="cbp-vm-price" style="color:black;"> </div>
-              <div class="cbp-vm-details">
-              
-              </div>
-
-            <a class="cbp-vm-icon cbp-vm-add" href="all_products.php?rp_cart=<?php// echo $pro_id;?>">Cart</a> 
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Make Bid</button>
-            </li>
-          
-      
-          </ul>
-
-          <hr style="background-color: black;">
-
+    <option value="Completed">Completed</option>
+   
+    </select>
 
 
 
     
-      </div>-->
+   
+</div>
+
+
+<div class="form-group row">
+  <label for="example-datetime-local-input" class="col-2 col-form-label">Percentage</label>
+    <div class="col-10" id="ifYes" style="display: none;">
+    <input class="form-control" type="number" name="percent"  max=100 id="car" >
+  </div>
+ 
+  </div>
+</div>
+
+
+
+<br>
+
+<div style="text-align: center; ">
+<button type="submit" name="accept" style="font-size: 25px; padding: 10px 10px 10px 10px;" class="btn btn-success">Submit</button>
+
+</div>
+
+
+
 
 
   
-
-    </div>
-
+</div>
 
 
 
@@ -350,20 +311,41 @@ if ($flag == 2) {
 
 
 
+
+<br>
+
+
+
+</div>
+<br>
+<hr>
+<br>
+
+
+
+
+
+<br>
+
+
+
+
+      
+
+
+
+
+</form>
+
+
+
+
+</div>
+
+</div>
        
 
-     
 
-      
-
-
- 
-        
-
-
-  <!-- Modal -->
-
-        
 
       </div>
     </div>
@@ -385,10 +367,69 @@ if ($flag == 2) {
         Made with ♥ by <a href="https://www.elecbits.in">Elecbits</a>
       </div>
     </footer>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+});
+</script>
+
+
+
+
+
   </body>
   </html>
-<?php
+
+  <?php
+
+
+
+
+
+
+
+
+
+   if (isset($_POST['accept'])) {
+
+    $phase = $_POST['track_c'];
+$exp_date = $_POST['exp_date'];
+
+    $perc = $_POST['percent'];
+
+     
+
+     $track_status ="UPDATE applied_form SET allot_status='$phase' , perc='$perc', pick_up_date = '$exp_date' WHERE user = '$customer_id' && project_id='$product_id'";
+
+     $run_track_status = mysqli_query( $con , $track_status );
+
+     if ($run_track_status) {
+       
+       echo "<script>alert('Order has been updated')</script>";
+        echo "<script>window.open('my_bids.php?accept_list','_self')</script>";
+     }
+
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
-?>
+
+  ?>

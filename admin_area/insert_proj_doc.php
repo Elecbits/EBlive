@@ -67,14 +67,14 @@ include("include/db.php");
 </tr>
 <!--
 <tr>
-<td> IMAGE FILE :  </td>
+<td> uploadedfile FILE :  </td>
  
  <td><input type="file" name="uploadedfile2" required /> </td>
 
 </tr>
 
 <tr>
-<td> IMAGE FILE :  </td>
+<td> uploadedfile FILE :  </td>
  
  <td><input type="file" name="uploadedfile3" required /> </td>
 
@@ -100,43 +100,42 @@ include("include/db.php");
 
 if(isset($_POST["submit"])){
 
-$fileName=$_FILES["uploadedfile"]["name"];
-$fileSize=$_FILES["uploadedfile"]["size"]/1024;
-$fileType=$_FILES["uploadedfile"]["type"];
-$fileTmpName=$_FILES["uploadedfile"]["tmp_name"];  
 
-if($fileType=="application/msword"){
-if($fileSize<=500){
+if(isset($_FILES['uploadedfile'])){
 
-//New file name
-$random="Elecbits_project_";
-$newFileName=$random.$fileName;
+      $errors= array();
+      $file_name = $_FILES['uploadedfile']['name'];
+      $file_size =$_FILES['uploadedfile']['size'];
+      $file_tmp =$_FILES['uploadedfile']['tmp_name'];
+      $file_type=$_FILES['uploadedfile']['type'];
+      $file_ext=strtolower(end(explode('.',$file_name)));
+      
+      $expensions= array("doc","docx");
+      
+      if(in_array($file_ext,$expensions)=== false){
+         $errors[]="extension not allowed, please choose a .xlsx or .xls file.";
+      }
+      
+      if($file_size > 2097152){
+         $errors[]='File size must be excately 2 MB';
+      }
+      
+      if(empty($errors)==true){
+         move_uploaded_file($file_tmp,"design_doc/".$file_name);
 
-//File upload path
-$uploadPath="design_doc/".$newFileName;
 
-//function for upload file
-if(move_uploaded_file($fileTmpName,$uploadPath)){
-  echo "Successful<BR>"; 
-  echo "File Name :".$newFileName."<BR>"; 
-  echo "File Size :".$fileSize." kb"."<BR>"; 
-  echo "File Type :".$fileType."<BR>"; 
-}
-}
-else{
-  echo "Maximum upload file size limit is 500 kb";
-}
-}
-else{
-  echo "You can only upload a Word doc file.";
-}  
+        
+echo "<script>alert('File uploaded successfully')</script>";
+
+
+echo $file_name;
 
 $product_id= $_POST['product_id1'];
 
         
-   // $insert_product = "INSERT INTO products (product_image ) VALUES ('$file_tmp')  ";
+   // $insert_product = "INSERT INTO products (product_uploadedfile ) VALUES ('$file_tmp')  ";
 
-    $insert_doc = "UPDATE project_details SET design_doc= '$newFileName' WHERE project_id = '$product_id'  ";
+    $insert_doc = "UPDATE project_details SET design_doc= '$file_name' WHERE project_id = '$product_id'  ";
 
    $run_insert_product = mysqli_query($con , $insert_doc);
  
@@ -154,7 +153,9 @@ if ($run_insert_product) {
 
 
 
+}
 
+}
 }
 
 

@@ -103,7 +103,7 @@ $maker_info = "$user, $maker";
 
 
 
-     <td> <a href="delete_apply.php?delete_pro=<?php echo $product_id ?>" style="color: black; "> Delete </a> </td>      
+     <td> <a href="delete_apply.php?delete_pro=<?php echo $product_id ?>&&cid=<?php echo $user; ?>" style="color: black; "> Delete </a> </td>      
 
     
   </tr>

@@ -97,12 +97,12 @@ include("include/db.php");
     
 
     <tr>
-      <th>Project ID</th>
-      <th>Project Name</th>
-      <th>Project Description</th>
-      <th>Max Bid</th>
-      <th>Raw Material</th>
-      <th>Last Date</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Address</th>
+      <th>Username</th>
+      <th>Pass</th>
       <th>Delete</th>
 
     
@@ -111,7 +111,7 @@ include("include/db.php");
 
 <?php
 
-$get_pro="SELECT * FROM project_details";
+$get_pro="SELECT * FROM makerclan";
 
 $run_pro =mysqli_query($con , $get_pro);
 
@@ -119,26 +119,26 @@ $i=0;
 while ($row_pro=mysqli_fetch_array($run_pro)) {
   
 
-  $proj_id= $row_pro['project_id'];
-  $proj_title= $row_pro['project_name'];
-  $proj_desc= $row_pro['project_desc'];
-  $skills= $row_pro['skills'];
-  $max_bid= $row_pro['max_bid'];
-  $proj_raw_materials= $row_pro['raw_materials'];
-  $proj_last_date= $row_pro['last_date'];
+  $maker_name= $row_pro['name'];
+  $maker_email= $row_pro['email'];
+  $maker_contact= $row_pro['contact'];
+  $maker_address= $row_pro['address'];
+  $maker_username= $row_pro['username'];
+  $maker_pass= $row_pro['pass'];
+  $maker_pincode= $row_pro['pincode'];
 
 
   $i++;
 
 ?>
 <tr>
-      <td> <?php echo $proj_id; ?></td>
-      <td> <?php echo $proj_title; ?></td>
-      <td> <?php echo $skills; ?> | <br><?php echo $proj_desc; ?></td>
-      <td> <?php echo $max_bid; ?></td>
-      <td> <?php echo $proj_raw_materials; ?></td>
-      <td> <?php echo $proj_last_date; ?></td>
-       <td> <a href="delete_proj.php?delete_pro=<?php echo $proj_id ?>" style="color: black; "> Delete </a> </td>      
+      <td> <?php echo $maker_name; ?></td>
+      <td> <?php echo $maker_email; ?></td>
+      <td> <?php echo $maker_contact; ?> </td>
+      <td> <?php echo $maker_address; ?> | <?php echo $maker_pincode; ?></td>
+      <td> <?php echo $maker_username; ?></td>
+      <td> <?php echo $maker_pass; ?></td>
+       <td> <a href="delete_maker.php?delete_pro=<?php echo $maker_email ?>" style="color: black; "> Delete </a> </td>      
 
 
   </tr>
@@ -194,20 +194,19 @@ require_once "Classes/PHPExcel.php";
    // $lastRow = $worksheet3->getHighestRow();
   //  $lastcol = $worksheet->getHighestColumn();
 
-  $project_id = $worksheet->getCell('A'.'2')->getValue();
-  $project_name = $worksheet->getCell('B'.'2')->getValue();
-  $project_desc = $worksheet->getCell('C'.'2')->getValue();
-  $max_bid =  $worksheet->getCell('D'.'2')->getValue();
-  $raw_material = $worksheet->getCell('E'.'2')->getValue();
-  $last_date = $worksheet->getCell('F'.'2')->getValue();
-  $skills = $worksheet->getCell('G'.'2')->getValue();
-  $flag = $worksheet->getCell('H'.'2')->getValue();
+  $name = $worksheet->getCell('A'.'2')->getValue();
+  $email = $worksheet->getCell('B'.'2')->getValue();
+  $contact = $worksheet->getCell('C'.'2')->getValue();
+ $address =  $worksheet->getCell('D'.'2')->getValue();
+  $username = $worksheet->getCell('E'.'2')->getValue();
+  $pass = $worksheet->getCell('F'.'2')->getValue();
+  $pincode = $worksheet->getCell('G'.'2')->getValue();
 
  $upload_date = date("Y/m/d");
 
 
 
-$upsert_query = "SELECT project_id from project_details where project_id = '$project_id'";
+$upsert_query = "SELECT email from makerclan where email = '$email'";
 
 $run_upsert_query = mysqli_query($con , $upsert_query);
 
@@ -216,13 +215,13 @@ $count_upsert_query = mysqli_num_rows($run_upsert_query);
 if ($count_upsert_query == 0) {
  
 //Insert here
- $insert_info = "INSERT INTO project_details (project_id, project_name, project_desc, max_bid, raw_materials, last_date, upload_date, skills, flag) values ('$project_id', '$project_name', '$project_desc', '$max_bid', '$raw_material', '$last_date' , '$upload_date', '$skills','$flag')";
+ $insert_info = "INSERT INTO makerclan (name, email, contact, address, username, pass, pincode) values ('$name', '$email', '$contact', '$address', '$username', '$pass' , '$pincode')";
 
 
 
 if (mysqli_query($con , $insert_info)) {
     echo "<script>alert('Product has been added')</script>";
-    echo "<script>window.open('index.php?clan_project','_self')</script>";
+    echo "<script>window.open('index.php?add_makers','_self')</script>";
 } else {
     echo "Error: " . $insert_info . "<br>" . mysqli_error($con);
 }
@@ -232,11 +231,11 @@ if (mysqli_query($con , $insert_info)) {
 else
 {
 
-$update_info = "UPDATE project_details SET project_name = '$project_name' , project_desc = '$project_desc' , max_bid = '$max_bid' , raw_materials = '$raw_material' , last_date = '$last_date' , upload_date = '$upload_date' , skills = '$skills' , flag = '$flag' where project_id = '$project_id'";
+$update_info = "UPDATE makerclan SET name = '$name' , contact = '$contact' , address = '$address' , username = '$username' , pass = '$pass' , pincode = '$pincode'  where email = '$email'";
 
 if (mysqli_query($con , $update_info)) {
     echo "<script>alert('Product has been updated')</script>";
-    echo "<script>window.open('index.php?clan_project','_self')</script>";
+    echo "<script>window.open('index.php?add_makers','_self')</script>";
 } else {
     echo "Error: " . $insert_info . "<br>" . mysqli_error($con);
 }

@@ -22,7 +22,7 @@
     <label for="email" style="text-align: center;">NEWSLETTER</label>
     <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
   </div>
-<button type="submit" class="btn btn-default" name="sub">Subscribe</button>
+<button type="submit" class="btn btn-success" name="sub">Subscribe</button>
 </form>
 
 <hr>
