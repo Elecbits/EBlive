@@ -50,7 +50,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<p style="font-family: 'Muli', sans-serif;">Copyright © 2016 <a href="http://elecbits.in" target="blank">Elecbits</a> / All rights reserved.<div style="float:right;">Made with<span style="font-size:200%;color:red">&hearts;</span> in India!</div> </p>  
+						<p style="font-family: 'Muli', sans-serif;">Copyright © 2018 <a href="http://elecbits.in" target="blank">Elecbits</a> / All rights reserved.<div style="float:right;">Made with<span style="font-size:200%;color:red">&hearts;</span> in India!</div> </p>  
 
 					</div>
 					
