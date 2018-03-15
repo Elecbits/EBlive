@@ -485,7 +485,7 @@ $bu_name = "Sign In/Sign Up";
             <h2 class="featurette-heading" style="font-size: 30px; font-weight: 600; color: red;" >Learning Electronics is Easy.<br>
                 <span class="text-muted" style="font-size: 25px; font-weight: 600;">From Codes to Connections, <br> Get everything here.</span>
             </h2>
-            <p class="lead" style="text-align: justify; font-size: 18px; font-family: 'Average Sans', sans-serif; "><span style="font-weight: 600;">Are you confused on how to begin your learning in electronics ?</span> <br>
+            <p class="lead" style="text-align: justify; font-size: 18px; font-family: 'Average Sans', sans-serif; "><span style="font-weight: 600;">Are you confused on how to begin your learning in electronics   ?</span> <br>
             Here we have the best kind of service where you can easily learn electronics and also get the deep insight on how basic theoretical concepts are interacted in real world. <br>
             We have the set of finest videos and course segment where you can learn and experiment. We made sure that you can understand everything. A small review at the end of every segment makes you feel confident about what you had learnt.</p>
             <br>
