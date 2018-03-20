@@ -49,6 +49,7 @@ $run_app =mysqli_query($con , $get_app);
 $row_app=mysqli_fetch_array($run_app);
 
   $exp_date1= $row_app['pick_up_date'];
+  $perce = $row_app['perc'];
 
 
 
@@ -230,8 +231,7 @@ $comp_req = '';
 </blockquote>
 
 
-<br>
-
+Present Status - <?php echo $allot_order;  ?> - [<?php echo $perce ; ?>%] 
 
 
 
@@ -281,9 +281,9 @@ $comp_req = '';
 
 
 <div class="form-group row">
-  <label for="example-datetime-local-input" class="col-2 col-form-label">Percentage</label>
+  <label for="example-datetime-local-input" class="col-2 col-form-label">Percentage </label>
     <div class="col-10" id="ifYes" style="display: none;">
-    <input class="form-control" type="number" name="percent"  max=100 id="car" >
+    <input class="form-control" type="number" name="percent"  max=100 id="car">
   </div>
  
   </div>

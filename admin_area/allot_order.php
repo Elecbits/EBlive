@@ -27,6 +27,15 @@ else{
 
    $allot_order = $_GET['ao'];
 
+$get_app="SELECT * FROM applied_form where project_id = '$product_id' AND user='$customer_id' ";
+
+$run_app =mysqli_query($con , $get_app);
+
+$row_app=mysqli_fetch_array($run_app);
+
+
+  $perce = $row_app['perc'];
+
 
  
  }
@@ -58,6 +67,7 @@ else{
 
 <h3 style=" font-family: 'Montserrat', sans-serif;  padding: 0px 0px 10px 0px; text-align: center; ">ORDER STATUS</h3>
 
+Present Status - <?php echo $allot_order;  ?> - [<?php echo $perce ; ?>%] 
 
 
 
@@ -82,7 +92,6 @@ else{
        <option>Paid</option>
      </select> </td>
 
-
      <td><input type="submit" name="submit" value="Update status"> </td>
    </tr>
 
@@ -92,37 +101,55 @@ else{
 
    if (isset($_POST['submit'])) {
 
-    $track_c = $_POST['track_c'];
+    $track_t = $_POST['track_c'];
 
+  $track_c  = trim($track_t);
     
-    if ($track_c == 'Completed') {
-      
-
-      $upd_status ="UPDATE project_details SET flag=2 WHERE user = '$customer_id' && project_id='$product_id'";
-
-      $run_upd_status = mysqli_query( $con , $upd_status );
-
-       if ($run_upd_status) {
-       
-       echo "<script>alert('Order has been updated')</script>";
-        echo "<script>window.open('index.php?accept_list','_self')</script>";
-     }
 
 
-    }
-
-
-
-     
 
      $track_status ="UPDATE applied_form SET allot_status='$track_c' WHERE user = '$customer_id' && project_id='$product_id'";
 
      $run_track_status = mysqli_query( $con , $track_status );
 
      if ($run_track_status) {
+
+          if ($track_c == 'Completed') {
+       
+      $upd_status = "UPDATE project_details SET flag=2 WHERE  project_id='$product_id'";
+     $run_upd_status = mysqli_query( $con , $upd_status );
+
+       if ($run_upd_status) {
+       
+       echo "<script>alert('$track_c updated')</script>";
+       
+     }
+
+
+
+
+    }
+
+       if ($track_c == 'Alloted') {
+       
+      $upd_status = "UPDATE project_details SET flag=0 WHERE  project_id='$product_id'";
+     $run_upd_status = mysqli_query( $con , $upd_status );
+
+       if ($run_upd_status) {
+       
+       echo "<script>alert('$track_c updated')</script>";
+       
+     }
+
+
+
+
+    }
+
+
        
        echo "<script>alert('Order has been updated')</script>";
-        echo "<script>window.open('index.php?accept_list','_self')</script>";
+       echo "<script>window.open('index.php?accept_list','_self')</script>";
      }
 
 
