@@ -231,7 +231,7 @@ include("includes/db.php");
         </div><br>
 
         <h4 class="modal-title">Job Description</h4>
-        <div class="modal-2">The position will design products and document the details for technical team.
+        <div class="modal-2">The position will design products and document the details for the technical team.
         </div><br>
 
 
