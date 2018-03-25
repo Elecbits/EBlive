@@ -144,7 +144,7 @@ else{
 
 $_SESSION['customer_email']= $c_email;
 
-echo "<script>alert('You logged in successfully')</script>";
+echo "<script>alert('You logged in successfully!')</script>";
 echo "<script>window.open('checkout.php','_self')</script>";
 }
 }
