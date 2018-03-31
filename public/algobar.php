@@ -25,20 +25,20 @@
 
 
     
-    <div class="panel panel-default hidden-xs" style=" border-style: solid; border-color: grey;">
+    <div class="panel panel-default hidden-xs">
  
     <div id="pb1" class="panel-body" style=" padding: 0px 0px 10px 20px; margin-top: 10px;  ">
     
     <div class="Algo bar">
 
-    <h4 style="font-family: 'Muli', sans-serif; " >Get the finest projects in your range.</h4>
+    <h4 >Get the finest projects in your range.</h4>
 
     <form method="post" action="searchproject.php" enctype="multipart/form-data" >
 
     <div class="col-lg-4" style=" padding: 10px 0px 0px 10px;  ">
       
-      <label style="font-family: 'Muli', sans-serif;   ">Select Price </label>
-       <select style="font-family: 'Muli', sans-serif; font-size:14px;  " name="range">       
+      <label>Select Price </label>
+       <select style="font-size:14px;  " name="range">       
        <option>0-3999 </option>
        <option>4000-6999</option>
        <option>7000-9999</option>
@@ -50,9 +50,9 @@
 
       <div class="col-lg-6" style=" padding: 10px 0px 0px 10px;  ">
       
-       <label style="font-family: 'Muli', sans-serif; ">Categories</label>
+       <label>Categories</label>
        <select name="cats">     
-       <option style='font-family: 'Muli', sans-serif; font-size:18px; '>All projects</option>
+       <option style='font-size:18px; '>All projects</option>
        <?php 
 
         $get_cats = "select * from categories";
@@ -66,7 +66,7 @@
 
         ?>
           
-        <option style='font-family: 'Muli', sans-serif; font-size:18px; '><?php echo $cat_title;?></option>
+        <option style='font-size:18px; '><?php echo $cat_title;?></option>
          
         
      

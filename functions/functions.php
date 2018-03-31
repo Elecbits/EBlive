@@ -376,35 +376,22 @@ function newgetpro()
 
         
       echo "
-      <div class = col-lg-4 col-xs-12 col-md-6 col-sm-12 >  
-      <div class='panel panel-default' style='border-style:solid;border-color:black;border-width: 3px;'>
+      <div class = col-lg-4 col-xs-12 col-md-6 col-sm-12 >
+   <div class='panel panel-default product-div' style=''>
       <div class='panel-body'>
-      
-       <img src='admin_area/product_img/$pro_image'  width='200' height='180' />
-
-       <div class='panel panel-default'>
-      <div class='panel-body'>
-
-      <a href='details1.php?pro_id=$pro_id'>
-      
-      <h5 style= 'font-family: 'Muli', sans-serif;'><strong>$pro_title</strong> </h5>
-
-      </a>
-
-      <p style='font-weight:900; float:left ; padding-top: 10px;'> ₹ $pro_price</p>
-
-      <a href='index.php?rp_cart=$pro_id' style='float:right';> <img src='images/addtocart.png' width='30' height='30' /> </a>
-
-      
-
+         <img src='admin_area/product_img/$pro_image'  width='200' height='180' />
+         <div class='panel panel-default'>
+            <div class='panel-body'>
+               <a href='details1.php?pro_id=$pro_id'>
+               <h5 style= 'font-family: 'Roboto', sans-serif;'>$pro_title </h5>
+               </a>
+               <p style='font-weight:900; float:left ; padding-top: 10px;'> ₹$pro_price</p>
+               <a href='index.php?rp_cart=$pro_id' style='float:right';> <img src='images/addtocart.png' width='30' height='30' /> </a>
+            </div>
+         </div>
       </div>
-      </div>
-      </div>
-
-
-
-      </div>
-      </div>
+   </div>
+</div>
 
       ";
 
@@ -436,8 +423,8 @@ function trendgetpro()
         $pro_image = $row_pro['product_image'];
         
       echo "
-      <div class = col-lg-4 col-xs-12 col-md-6 col-sm-12 >  
-      <div class='panel panel-default'  style='border-style:solid;border-color:black;border-width: 3px;'>
+      <div class = 'col-lg-4 col-xs-12 col-md-6 col-sm-12' >  
+      <div class='panel panel-default product-div'>
       <div class='panel-body'>
       
        <img src='admin_area/product_img/$pro_image'  width='200' height='180' />
@@ -447,7 +434,7 @@ function trendgetpro()
 
       <a href='details1.php?pro_id=$pro_id'>
       
-      <h5 style= 'font-family: 'Muli', sans-serif;'><strong>$pro_title</strong> </h5>
+      <h5>$pro_title</h5>
 
       </a>
 
